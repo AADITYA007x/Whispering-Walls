@@ -1,0 +1,85 @@
+{
+  "Q45585": [
+    {
+      "id": "cypress",
+      "x": 0.16,
+      "y": 0.55,
+      "title": "The flame-like cypress",
+      "story": "The dark cypress in the foreground rises like a flame, linking the earth to the sky. In Europe cypresses were often planted in cemeteries, and many people read this tree as a quiet reminder of death. Van Gogh himself loved their shape and wrote that he was surprised nobody had painted them the way he saw them."
+    },
+    {
+      "id": "sky",
+      "x": 0.45,
+      "y": 0.3,
+      "title": "A sky in motion",
+      "story": "Van Gogh painted this in 1889 while staying at an asylum in Saint-Rémy-de-Provence, in the south of France. The swirling sky was not copied from what he saw; he worked largely from memory and imagination, turning the night into rolling waves of energy."
+    },
+    {
+      "id": "moon",
+      "x": 0.88,
+      "y": 0.13,
+      "title": "The glowing moon",
+      "story": "The crescent moon and stars burn with thick halos of yellow and white paint. Look closely and you can see how heavily the paint was laid on, so the light almost stands out from the canvas."
+    },
+    {
+      "id": "village",
+      "x": 0.6,
+      "y": 0.8,
+      "title": "An imagined village",
+      "story": "The quiet village below was largely invented. Its pointed church steeple looks more like the churches of the Netherlands, where Van Gogh grew up, than those of Provence. Many see it as a small memory of home tucked into the scene."
+    }
+  ],
+  "Q185372": [
+    {
+      "id": "pearl",
+      "x": 0.47,
+      "y": 0.62,
+      "title": "The famous pearl",
+      "story": "The pearl that gives the painting its name is made of just a few strokes: a soft highlight on top and a reflection of her white collar below. There is no visible hook attaching it to her ear, and some think it may have been glass or polished tin rather than a real pearl."
+    },
+    {
+      "id": "turban",
+      "x": 0.4,
+      "y": 0.2,
+      "title": "The blue turban",
+      "story": "The bright blue of the turban comes from ultramarine, a pigment made from the semi-precious stone lapis lazuli. It was so expensive that it cost more than gold, yet Vermeer used it often."
+    },
+    {
+      "id": "face",
+      "x": 0.55,
+      "y": 0.45,
+      "title": "A face, not a portrait",
+      "story": "This is not a portrait of a known person. It is a 'tronie', a Dutch term for a study of a face, a character, or an expression. Nobody knows who the model was, which has inspired novels and a film imagining her story."
+    },
+    {
+      "id": "background",
+      "x": 0.85,
+      "y": 0.3,
+      "title": "The vanished curtain",
+      "story": "The background looks almost black today, but scientists studying the painting in 2018 found traces of a green curtain hanging behind her. The green has faded and darkened over the centuries."
+    }
+  ],
+  "Q12418": [
+    {
+      "id": "smile",
+      "x": 0.5,
+      "y": 0.33,
+      "title": "The shifting smile",
+      "story": "Leonardo blended the shadows around her mouth and eyes so softly, a technique called sfumato, that there are no hard edges. Because of this, her smile seems to appear and disappear depending on where you look."
+    },
+    {
+      "id": "hands",
+      "x": 0.55,
+      "y": 0.82,
+      "title": "The relaxed hands",
+      "story": "Her hands rest gently one over the other. For its time, this calm, natural pose was unusual, and many later portrait painters copied the idea."
+    },
+    {
+      "id": "landscape",
+      "x": 0.15,
+      "y": 0.42,
+      "title": "A dreamlike landscape",
+      "story": "Behind her stretches an imaginary landscape of winding paths, water, and misty mountains. Look carefully and the horizon on one side does not line up with the other, which adds to the painting's slightly unreal feeling."
+    }
+  ]
+}

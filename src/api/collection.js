@@ -37,3 +37,8 @@ export function imageSources(painting, large = false) {
 export function byline(painting) {
   return [painting.artist, painting.year].filter(Boolean).join(', ')
 }
+
+export function zoomSources(painting) {
+  const large = painting.imageLarge
+  return [large?.replace('/1920px-', '/3840px-'), large, painting.image].filter(Boolean)
+}

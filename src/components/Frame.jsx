@@ -16,7 +16,7 @@ export default function Frame({ painting, height }) {
         <ArtImage painting={painting} lazy className="h-full w-full object-cover" />
       </Link>
       <figcaption className="mt-5 w-56 bg-ivory px-3 py-2 text-left text-ink shadow-sm">
-        <span className="block truncate font-display text-sm italic">{painting.title}</span>
+        <span className="block truncate font-display text-sm font-medium">{painting.title}</span>
         <span className="block truncate text-xs text-ink/70">{byline(painting)}</span>
       </figcaption>
     </figure>

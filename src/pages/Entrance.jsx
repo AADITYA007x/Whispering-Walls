@@ -55,7 +55,7 @@ export default function Entrance() {
               <ArtImage painting={featured} className="block max-h-80 min-h-48 w-auto min-w-48" />
             </Link>
             <div>
-              <p className="font-display text-3xl italic leading-tight md:text-4xl">{featured.title}</p>
+              <p className="font-display text-3xl font-medium leading-tight md:text-4xl">{featured.title}</p>
               <p className="mt-3 opacity-80">{byline(featured)}</p>
               {featured.story && <p className="mt-4 line-clamp-3 max-w-[60ch] opacity-80">{featured.story}</p>}
               <Link

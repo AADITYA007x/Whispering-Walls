@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 md:px-8">
-      <Link to="/" className="font-display text-lg italic tracking-wide">
+      <Link to="/" className="font-display text-lg font-medium">
         Whispering Walls
       </Link>
       {pathname !== '/' && (
