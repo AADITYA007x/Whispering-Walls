@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bodoni Moda", "Didot", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --color-gilt: #c9a24a;
+  --color-gilt-deep: #a8862f;
+  --color-ivory: #f2ede3;
+  --color-stone: #d9d4cb;
+  --color-ink: #1c1a17;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--wall, #d9d4cb);
+  color: var(--ink-on-wall, #1c1a17);
+  font-family: var(--font-sans);
+  transition: background-color 0.9s ease, color 0.9s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gilt);
+  outline-offset: 4px;
+}
+
+.gilt-frame {
+  border: 12px solid var(--color-gilt-deep);
+  box-shadow:
+    inset 0 0 0 2px #e6cd85,
+    0 0 0 1px #6e5418,
+    0 22px 34px -14px rgba(0, 0, 0, 0.6);
+  background: #2a2620;
+}
+
+.picture-light {
+  background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(255, 236, 190, 0.22), transparent 70%);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
