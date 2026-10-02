@@ -11,7 +11,7 @@ export const WINGS = [
     rooms: [
       { id: '1400s', name: 'The 1400s', subtitle: 'Gold leaf and quiet saints', filters: { painting: true, from: 1400, to: 1499 } },
       { id: '1500s', name: 'The 1500s', subtitle: 'Renaissance masters at work', filters: { painting: true, from: 1500, to: 1599 } },
-      { id: '1600s', name: 'The 1600s', subtitle: 'Candlelight and deep shadow', filters: { painting: true, from: 1600, to: 1699 } },
+      { id: '1600s', name: 'The 1600s', subtitle: 'Candlelight and deep shadow', filters: { painting: true, from: 1600, to: 1699, perArtist: 3, artists: ['Rembrandt', 'Johannes Vermeer', 'Caravaggio', 'Peter Paul Rubens', 'Diego Velázquez', 'Frans Hals', 'Artemisia Gentileschi', 'Anthony van Dyck', 'Nicolas Poussin', 'Georges de La Tour'] } },
       { id: '1700s', name: 'The 1700s', subtitle: 'Pastel skies and powdered wigs', filters: { painting: true, from: 1700, to: 1799 } },
       { id: '1800-1849', name: '1800 to 1849', subtitle: 'Storms, ruins and romance', filters: { painting: true, from: 1800, to: 1849 } },
       { id: '1850-1899', name: '1850 to 1899', subtitle: 'Painting in the open air', filters: { painting: true, from: 1850, to: 1899 } },
@@ -25,11 +25,11 @@ export const WINGS = [
     text: '#f2ede3',
     rooms: [
       { id: 'impressionism', name: 'Impressionism', subtitle: 'Light caught in a hurry', filters: { painting: true, movements: ['Impressionism'] } },
-      { id: 'post-impressionism', name: 'Post-Impressionism', subtitle: 'Bold colour, bolder brushwork', filters: { painting: true, movements: ['Post-Impressionism', 'post-impressionism', 'Postimpressionism', 'Post-impressionism'] } },
+      { id: 'post-impressionism', name: 'Post-Impressionism', subtitle: 'Bold colour, bolder brushwork', filters: { painting: true, perArtist: 3, artists: ['Paul Gauguin', 'Georges Seurat', 'Paul Signac', 'Henri de Toulouse-Lautrec', 'Vincent van Gogh', 'Paul Cézanne', 'Henri Rousseau'] } },
       { id: 'indian-painting', name: 'Indian painting', subtitle: 'Courts, gods and gardens', filters: { countries: ['India', 'Mughal Empire'], movements: ['Mughal painting', 'Rajput painting', 'Pahari painting', 'Company painting'], matchAny: true } },
-      { id: 'japanese-prints', name: 'Japanese woodblock prints', subtitle: 'The floating world in ink', filters: { artists: ['Katsushika Hokusai', 'Utagawa Hiroshige', 'Kitagawa Utamaro', 'Tōshūsai Sharaku'] } },
+      { id: 'japanese-prints', name: 'Japanese woodblock prints', subtitle: 'The floating world in ink', filters: { perArtist: 5, artists: ['Katsushika Hokusai', 'Utagawa Hiroshige', 'Kitagawa Utamaro', 'Tōshūsai Sharaku'] } },
       { id: 'dutch-golden-age', name: 'Dutch Golden Age', subtitle: 'Merchants, still lifes and skies', filters: { painting: true, movements: ['Dutch Golden Age painting'] } },
-      { id: 'landscapes', name: 'Landscapes', subtitle: 'Fields, seas and mountains', filters: { painting: true, genres: ['landscape art', 'landscape painting', 'landscape', 'marine art', 'veduta'] } },
+      { id: 'landscapes', name: 'Landscapes', subtitle: 'Fields, seas and mountains', filters: { painting: true, perArtist: 3, artists: ['J. M. W. Turner', 'John Constable', 'Caspar David Friedrich', 'Jacob van Ruisdael', 'Thomas Cole', 'Albert Bierstadt', 'Alfred Sisley', 'Ivan Shishkin', 'Camille Pissarro'] } },
     ],
   },
   {

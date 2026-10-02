@@ -13,6 +13,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const literals = (list) => list.map((v) => `"${v.replace(/"/g, '\\"')}"@en`).join(' ')
 
 async function request(url, options = {}, tries = 4) {
+  let reason = 'unknown error'
   for (let i = 1; i <= tries; i++) {
     try {
       const res = await fetch(url, {
@@ -22,13 +23,14 @@ async function request(url, options = {}, tries = 4) {
       })
       if (res.status === 404) return null
       if (res.ok) return res.json()
-      if (res.status !== 429 && res.status < 500) throw new Error(`HTTP ${res.status}`)
+      reason = res.status === 429 ? 'too many requests, Wikidata asked us to slow down' : res.status >= 500 ? `server busy or query too slow (HTTP ${res.status})` : `HTTP ${res.status}`
+      if (res.status !== 429 && res.status < 500) break
     } catch (error) {
-      if (i === tries) throw error
+      reason = error.name === 'TimeoutError' ? 'query took too long' : `network problem (${error.message})`
     }
-    await sleep(3000 * i)
+    if (i < tries) await sleep(5000 * i)
   }
-  throw new Error('Gave up after retries')
+  throw new Error(reason)
 }
 
 function buildQuery(f) {
@@ -48,29 +50,27 @@ function buildQuery(f) {
   const from = f.from ?? -10000
   const to = f.to ?? 1920
   const dateLines = dated
-    ? `?item wdt:P571 ?inception . BIND(YEAR(?inception) AS ?year) FILTER(?year >= ${from} && ?year <= ${to})`
-    : `OPTIONAL { ?item wdt:P571 ?inception . } BIND(YEAR(?inception) AS ?year) FILTER(!BOUND(?year) || ?year <= ${to})`
+    ? `?item wdt:P571 ?inception .
+  BIND(YEAR(?inception) AS ?year)
+  FILTER(?year >= ${from} && ?year <= ${to})`
+    : `OPTIONAL { ?item wdt:P571 ?inception . }
+  BIND(YEAR(?inception) AS ?year)
+  FILTER(!BOUND(?year) || ?year <= ${to})`
+  const limit = f.perArtist ? PER_ROOM * 8 : PER_ROOM * 4
 
   return `
 SELECT ?item ?itemLabel ?creatorLabel ?image ?year ?article ?links ?collectionLabel WHERE {
-  {
-    SELECT DISTINCT ?item ?links ?year WHERE {
-      ${parts.join('\n      ')}
-      ?item wikibase:sitelinks ?links .
-      FILTER(?links >= ${dated ? 4 : 1})
-      ?item wdt:P18 [] .
-      ${dateLines}
-    }
-    ORDER BY DESC(?links)
-    LIMIT ${PER_ROOM * 3}
-  }
-  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .
+  ${parts.join('\n  ')}
   ?item wdt:P18 ?image .
+  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .
+  ?item wikibase:sitelinks ?links .
+  ${dateLines}
   OPTIONAL { ?item wdt:P170 ?creator . }
   OPTIONAL { ?item wdt:P195 ?collection . }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-ORDER BY DESC(?links)`
+ORDER BY DESC(?links)
+LIMIT ${limit}`
 }
 
 function commonsFile(imageUrl) {
@@ -88,9 +88,13 @@ async function collectRoom(filters) {
   const url = `${SPARQL}?format=json&query=${encodeURIComponent(buildQuery(filters))}`
   const json = await request(url, { headers: { Accept: 'application/sparql-results+json' } })
   const seen = new Map()
+  const perArtist = new Map()
   for (const row of json.results.bindings) {
     const id = row.item.value.split('/').pop()
     if (seen.has(id)) continue
+    const creator = row.creatorLabel?.value || 'unknown'
+    if (filters.perArtist && (perArtist.get(creator) || 0) >= filters.perArtist) continue
+    perArtist.set(creator, (perArtist.get(creator) || 0) + 1)
     if (/^Q\d+$/.test(row.itemLabel?.value || '')) continue
     seen.set(id, {
       id,
