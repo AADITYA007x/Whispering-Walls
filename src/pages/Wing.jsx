@@ -5,6 +5,7 @@ import { ENTRANCE, findWing, roomKey } from '../data/museum.js'
 import { getRoomPaintings, roomPreviews } from '../api/collection.js'
 import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+import { useScene } from '../components/SoundProvider.jsx'
 
 function roomNote(paintings) {
   if (!paintings.length) return 'Empty for now'
@@ -16,6 +17,7 @@ function roomNote(paintings) {
 export default function Wing() {
   const { wingId } = useParams()
   const wing = findWing(wingId)
+  useScene('gallery')
   useWall(wing?.wall ?? ENTRANCE.wall, wing?.text ?? ENTRANCE.text)
 
   if (!wing) return <NotFound />

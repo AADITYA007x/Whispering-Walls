@@ -17,12 +17,14 @@ import {
 } from '../api/collection.js'
 import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+import { useScene } from '../components/SoundProvider.jsx'
 import { useMediaQuery } from '../hooks/useMediaQuery.js'
 
 const roomCount = WINGS.reduce((n, w) => n + w.rooms.length, 0)
 const DOOR_WIDTH = 'w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)]'
 
 export default function Entrance() {
+  useScene('gallery')
   useWall(ENTRANCE.wall, ENTRANCE.text)
   const navigate = useNavigate()
   const isSmall = useMediaQuery('(max-width: 767px)')

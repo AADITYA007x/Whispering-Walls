@@ -8,6 +8,8 @@ import Wing from './pages/Wing.jsx'
 import Room from './pages/Room.jsx'
 import Painting from './pages/Painting.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Postcards from './pages/Postcards.jsx'
+import { SoundProvider } from './components/SoundProvider.jsx'
 
 export default function App() {
   const location = useLocation()
@@ -17,6 +19,7 @@ export default function App() {
   }, [location.pathname])
 
   return (
+    <SoundProvider>
     <div className="flex min-h-screen flex-col">
       <Header />
       <AnimatePresence mode="wait">
@@ -33,11 +36,13 @@ export default function App() {
             <Route path="/wing/:wingId" element={<Wing />} />
             <Route path="/wing/:wingId/room/:roomId" element={<Room />} />
             <Route path="/painting/:id" element={<Painting />} />
+            <Route path="/postcards" element={<Postcards />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </motion.main>
       </AnimatePresence>
       <Footer />
     </div>
+    </SoundProvider>
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { askPainting } from '../api/chat.js'
+import { useNarrator } from '../hooks/useNarrator.js'
 
 const SUGGESTIONS = ['Who made you, and why?', 'What should I notice first?', 'Where have you been since you were painted?']
 
@@ -9,6 +10,8 @@ export default function AskPainting({ painting }) {
   const [thinking, setThinking] = useState(false)
   const [error, setError] = useState('')
   const logRef = useRef(null)
+  const narrator = useNarrator()
+  const [readingIndex, setReadingIndex] = useState(null)
 
   useEffect(() => {
     logRef.current?.scrollTo({ top: logRef.current.scrollHeight, behavior: 'smooth' })
@@ -51,11 +54,30 @@ export default function AskPainting({ painting }) {
             ) : (
               <div key={i} className="max-w-[92%]">
                 <p className="font-display text-lg leading-relaxed">{m.text}</p>
-                {m.sources?.map((s) => (
-                  <a key={s.url} href={s.url} target="_blank" rel="noreferrer" className="mt-1 inline-block text-xs underline underline-offset-2 opacity-60 hover:opacity-90">
-                    {s.label}
-                  </a>
-                ))}
+                <div className="mt-1 flex flex-wrap items-center gap-4 text-xs">
+                  {narrator.supported && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (readingIndex === i && narrator.speaking) {
+                          narrator.stop()
+                          setReadingIndex(null)
+                        } else {
+                          setReadingIndex(i)
+                          narrator.speak(m.text, () => setReadingIndex(null))
+                        }
+                      }}
+                      className="underline underline-offset-2 opacity-70 hover:opacity-100"
+                    >
+                      {readingIndex === i && narrator.speaking ? 'Stop' : 'Listen'}
+                    </button>
+                  )}
+                  {m.sources?.map((s) => (
+                    <a key={s.url} href={s.url} target="_blank" rel="noreferrer" className="underline underline-offset-2 opacity-60 hover:opacity-90">
+                      {s.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             ),
           )}

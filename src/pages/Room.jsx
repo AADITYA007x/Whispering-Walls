@@ -7,6 +7,7 @@ import { ENTRANCE, findRoom, roomKey } from '../data/museum.js'
 import { getRoomPaintings, hasCollection } from '../api/collection.js'
 import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+import { useScene } from '../components/SoundProvider.jsx'
 import { useMediaQuery } from '../hooks/useMediaQuery.js'
 
 function Chevron({ flip }) {
@@ -20,6 +21,7 @@ function Chevron({ flip }) {
 export default function Room() {
   const { wingId, roomId } = useParams()
   const { wing, room, index } = findRoom(wingId, roomId)
+  useScene(room?.sound || 'gallery')
   useWall(wing?.wall ?? ENTRANCE.wall, wing?.text ?? ENTRANCE.text)
   const isSmall = useMediaQuery('(max-width: 767px)')
   const wallRef = useRef(null)

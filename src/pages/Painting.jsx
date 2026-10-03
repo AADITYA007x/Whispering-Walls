@@ -8,6 +8,8 @@ import { VIEWING_ROOM } from '../data/museum.js'
 import { getPainting } from '../api/collection.js'
 import { getHotspots, saveHotspots } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+import { useNarrator } from '../hooks/useNarrator.js'
+import { usePostcards } from '../hooks/usePostcards.js'
 
 const TOUR_STEP_MS = 6500
 const canEdit = import.meta.env.DEV
@@ -19,9 +21,25 @@ function ControlButton({ onClick, label, children, pressed }) {
       onClick={onClick}
       aria-label={label}
       aria-pressed={pressed}
-      className="border border-ivory/40 px-3 py-2 text-sm transition-colors hover:bg-ivory/10 aria-pressed:bg-ivory aria-pressed:text-ink"
+      className="h-10 border border-ivory/40 px-4 text-sm transition-colors hover:bg-ivory/10 aria-pressed:border-gilt aria-pressed:bg-gilt aria-pressed:text-ink"
     >
       {children}
+    </button>
+  )
+}
+
+function IconButton({ onClick, label, children }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={label}
+      title={label}
+      className="grid h-10 w-11 place-items-center border-r border-ivory/40 transition-colors last:border-r-0 hover:bg-ivory/10"
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
+        {children}
+      </svg>
     </button>
   )
 }
@@ -48,6 +66,13 @@ function PaintingView({ painting }) {
   const [editingId, setEditingId] = useState(null)
   const [draft, setDraft] = useState(null)
   const [saveStatus, setSaveStatus] = useState('')
+  const [readAloud, setReadAloud] = useState(false)
+  const narrator = useNarrator()
+  const postcards = usePostcards()
+  const saved = postcards.isSaved(painting.id)
+  const touringRef = useRef(false)
+  const quietNext = useRef(false)
+  touringRef.current = touring
 
   const active = hotspots.find((h) => h.id === activeId)
   const activeIndex = hotspots.findIndex((h) => h.id === activeId)
@@ -55,6 +80,7 @@ function PaintingView({ painting }) {
   useEffect(() => {
     if (!touring) return
     if (tourStep >= hotspots.length) {
+      if (readAloud) quietNext.current = true
       setTouring(false)
       setActiveId(null)
       zoomRef.current?.home()
@@ -63,9 +89,30 @@ function PaintingView({ painting }) {
     const spot = hotspots[tourStep]
     setActiveId(spot.id)
     zoomRef.current?.focus(spot)
+    if (readAloud) return
     const timer = setTimeout(() => setTourStep((s) => s + 1), TOUR_STEP_MS)
     return () => clearTimeout(timer)
-  }, [touring, tourStep, hotspots])
+  }, [touring, tourStep, hotspots, readAloud])
+
+  useEffect(() => {
+    if (!readAloud) {
+      narrator.stop()
+      return
+    }
+    if (quietNext.current) {
+      quietNext.current = false
+      return
+    }
+    const spot = hotspots.find((h) => h.id === activeId)
+    const text = spot
+      ? `${spot.title}. ${spot.story}`
+      : `${painting.title}, by ${painting.artist}. ${painting.story || ''}`
+    let timer
+    narrator.speak(text, () => {
+      if (touringRef.current) timer = setTimeout(() => setTourStep((s) => s + 1), 900)
+    })
+    return () => clearTimeout(timer)
+  }, [readAloud, activeId])
 
   function select(id) {
     if (editing) return
@@ -168,33 +215,59 @@ function PaintingView({ painting }) {
             />
           </div>
 
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <ControlButton onClick={() => zoomRef.current?.zoomBy(1.5)} label="Zoom in">
-              Zoom in
-            </ControlButton>
-            <ControlButton onClick={() => zoomRef.current?.zoomBy(1 / 1.5)} label="Zoom out">
-              Zoom out
-            </ControlButton>
-            <ControlButton onClick={showWhole} label="Show the whole painting">
-              Whole painting
-            </ControlButton>
-            {hotspots.length > 0 && !editing && (
-              <>
-                <ControlButton onClick={toggleTour} label={touring ? 'Stop the tour' : 'Start the look closer tour'} pressed={touring}>
-                  {touring ? 'Stop tour' : 'Look closer tour'}
-                </ControlButton>
-                <ControlButton onClick={() => setShowHotspots((s) => !s)} label="Show or hide details" pressed={showHotspots}>
-                  {showHotspots ? 'Hide details' : 'Show details'}
-                </ControlButton>
-              </>
-            )}
-            {canEdit && (
-              <ControlButton onClick={startEditing} label="Edit hotspots" pressed={editing}>
-                {editing ? 'Done editing' : 'Edit hotspots'}
-              </ControlButton>
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+            <div role="group" aria-label="Zoom" className="flex border border-ivory/40">
+              <IconButton onClick={() => zoomRef.current?.zoomBy(1 / 1.5)} label="Zoom out">
+                <path d="M5 12h14" />
+              </IconButton>
+              <IconButton onClick={() => zoomRef.current?.zoomBy(1.5)} label="Zoom in">
+                <path d="M5 12h14M12 5v14" />
+              </IconButton>
+              <IconButton onClick={showWhole} label="Show the whole painting">
+                <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+              </IconButton>
+            </div>
+
+            {!editing && (
+              <div role="group" aria-label="Explore" className="flex flex-wrap gap-2">
+                {hotspots.length > 0 && (
+                  <>
+                    <ControlButton onClick={toggleTour} label={touring ? 'Stop the tour' : 'Start the look closer tour'} pressed={touring}>
+                      {touring ? 'Stop tour' : 'Look closer tour'}
+                    </ControlButton>
+                    <ControlButton onClick={() => setShowHotspots((s) => !s)} label="Show hidden details" pressed={showHotspots}>
+                      Details
+                    </ControlButton>
+                  </>
+                )}
+                {narrator.supported && (
+                  <ControlButton onClick={() => setReadAloud((r) => !r)} label="Read stories aloud" pressed={readAloud}>
+                    {readAloud && narrator.speaking ? 'Reading…' : 'Read aloud'}
+                  </ControlButton>
+                )}
+              </div>
             )}
           </div>
-          <p className="mt-3 text-xs opacity-60">Scroll or pinch to zoom, drag to look around.</p>
+
+          <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-ivory/15 pt-3">
+            <button
+              type="button"
+              onClick={() => postcards.toggle(painting.id)}
+              aria-pressed={saved}
+              className="inline-flex items-center gap-2 px-1 py-1.5 text-sm transition-opacity hover:opacity-100 aria-pressed:text-gilt opacity-90"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.6">
+                <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" />
+              </svg>
+              {saved ? 'Saved to postcards' : 'Save postcard'}
+            </button>
+            {canEdit && (
+              <button type="button" onClick={startEditing} aria-pressed={editing} className="px-1 py-1.5 text-sm underline underline-offset-4 opacity-80 hover:opacity-100">
+                {editing ? 'Done editing' : 'Edit hotspots'}
+              </button>
+            )}
+            <p className="ml-auto text-xs opacity-60">Scroll or pinch to zoom, drag to look around.</p>
+          </div>
         </div>
 
         <div className="pb-6">
