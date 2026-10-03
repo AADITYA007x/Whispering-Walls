@@ -1,17 +1,35 @@
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import Doorway from '../components/Doorway.jsx'
 import ArtImage from '../components/ArtImage.jsx'
+import Frame from '../components/Frame.jsx'
 import EmptyCollection from '../components/EmptyCollection.jsx'
 import DetailsBadge from '../components/DetailsBadge.jsx'
-import { hotspotCount } from '../api/hotspots.js'
 import { ENTRANCE, SURPRISE, WINGS } from '../data/museum.js'
-import { byline, getPaintingOfTheDay, getRandomPainting, hasCollection } from '../api/collection.js'
+import {
+  byline,
+  getPaintingOfTheDay,
+  getRandomPainting,
+  hasCollection,
+  mostFamous,
+  totalPaintings,
+  wingPreview,
+} from '../api/collection.js'
+import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+import { useMediaQuery } from '../hooks/useMediaQuery.js'
+
+const roomCount = WINGS.reduce((n, w) => n + w.rooms.length, 0)
 
 export default function Entrance() {
   useWall(ENTRANCE.wall, ENTRANCE.text)
   const navigate = useNavigate()
+  const isSmall = useMediaQuery('(max-width: 767px)')
   const featured = getPaintingOfTheDay()
+  const whispering = mostFamous((p) => hotspotCount(p.id) > 0, 14)
+  const total = totalPaintings()
+  const withDetails = mostFamous((p) => hotspotCount(p.id) > 0, 10000).length
+  const [mysteryPainting] = useState(() => getRandomPainting())
 
   function surprise() {
     const painting = getRandomPainting()
@@ -19,51 +37,89 @@ export default function Entrance() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-5 md:px-8">
-      <section className="pt-8 pb-14 text-center md:pt-14">
-        <h1 className="font-display text-5xl leading-none md:text-8xl">Whispering Walls</h1>
-        <p className="mx-auto mt-6 max-w-[44ch] text-lg">
-          A museum of paintings that tell their stories. Pick a door and wander in.
+    <div>
+      <section className="mx-auto max-w-6xl px-5 pt-6 pb-12 text-center md:px-8 md:pt-10">
+        <h1 className="font-display text-6xl font-semibold leading-[0.95] tracking-tight md:text-[8.5rem]">
+          Whispering
+          <br />
+          Walls
+        </h1>
+        <p className="mx-auto mt-7 max-w-[40ch] text-lg leading-relaxed md:text-xl">
+          A museum where paintings tell their own stories. Peek through a doorway and wander in.
         </p>
+        {total > 0 && (
+          <p className="mt-3 text-sm opacity-65">
+            {total} paintings in {roomCount} rooms, {withDetails} with hidden details to uncover
+          </p>
+        )}
       </section>
 
-      <nav aria-label="Museum wings" className="grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-4 md:gap-8">
-        {WINGS.map((wing) => (
-          <Doorway
-            key={wing.id}
-            to={`/wing/${wing.id}`}
-            wall={wing.wall}
-            text={wing.text}
-            title={wing.name}
-            subtitle={wing.blurb}
-          />
-        ))}
+      <nav aria-label="Museum wings" className="mx-auto grid max-w-6xl grid-cols-2 gap-x-5 gap-y-12 px-5 md:grid-cols-4 md:gap-8 md:px-8">
+        {WINGS.map((wing, i) => {
+          const preview = wingPreview(wing)
+          return (
+            <Doorway
+              key={wing.id}
+              index={i}
+              to={`/wing/${wing.id}`}
+              wall={wing.wall}
+              title={wing.name}
+              subtitle={wing.blurb}
+              painting={preview}
+              note={preview ? `Through this door: ${preview.title}` : null}
+            />
+          )
+        })}
         <Doorway
+          index={WINGS.length}
           onClick={surprise}
           disabled={!hasCollection()}
           wall={SURPRISE.wall}
-          text={SURPRISE.text}
           title="Surprise me"
           subtitle="Step in front of a random painting"
+          painting={mysteryPainting}
+          note="No peeking"
+          mystery
         />
       </nav>
 
-      <section className="mt-24 border-t border-ink/20 pt-10">
-        <h2 className="font-display text-3xl">Painting of the day</h2>
+      {whispering.length > 0 && (
+        <section className="mt-28">
+          <div className="mx-auto max-w-6xl px-5 md:px-8">
+            <h2 className="font-display text-3xl font-medium md:text-4xl">Paintings with hidden details</h2>
+            <p className="mt-2 max-w-[56ch] opacity-75">
+              Tap the glowing markers on these paintings to uncover the secrets tucked into their corners.
+            </p>
+          </div>
+          <div className="no-scrollbar mt-4 flex snap-x items-end gap-14 overflow-x-auto px-[6vw] pt-16 pb-4">
+            {whispering.map((painting) => (
+              <Frame key={painting.id} painting={painting} height={isSmall ? 190 : 240} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="mx-auto mt-24 max-w-6xl px-5 md:px-8">
+        <h2 className="font-display text-3xl font-medium md:text-4xl">Painting of the day</h2>
         {!featured && <EmptyCollection />}
         {featured && (
-          <div className="mt-8 grid items-center gap-10 md:grid-cols-[auto_minmax(0,1fr)]">
-            <Link to={`/painting/${featured.id}`} className="gilt-frame mx-auto block w-fit">
-              <ArtImage painting={featured} className="block max-h-80 min-h-48 w-auto min-w-48" />
+          <div className="mt-10 grid items-center gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+            <Link to={`/painting/${featured.id}`} className="relative mx-auto block w-fit pt-6">
+              <span className="picture-lamp" aria-hidden="true" style={{ top: '-4px' }} />
+              <span className="gilt-frame block w-fit">
+                <ArtImage painting={featured} large className="block max-h-[28rem] min-h-48 w-auto min-w-48" />
+              </span>
             </Link>
             <div>
-              <p className="font-display text-3xl font-medium leading-tight md:text-4xl">{featured.title}</p>
-              <p className="mt-3 opacity-80">{byline(featured)}</p>
-              <DetailsBadge count={hotspotCount(featured.id)} className="mt-2" />
-              {featured.story && <p className="mt-4 line-clamp-3 max-w-[60ch] opacity-80">{featured.story}</p>}
+              <p className="font-display text-4xl font-medium leading-tight md:text-5xl">{featured.title}</p>
+              <p className="mt-3 text-lg opacity-80">{byline(featured)}</p>
+              <DetailsBadge count={hotspotCount(featured.id)} className="mt-3" />
+              {featured.story && (
+                <p className="mt-5 line-clamp-4 max-w-[58ch] font-display text-lg leading-relaxed opacity-90">{featured.story}</p>
+              )}
               <Link
                 to={`/painting/${featured.id}`}
-                className="mt-6 inline-block border border-current px-5 py-2 text-sm transition-colors hover:bg-ink hover:text-ivory"
+                className="mt-7 inline-block bg-ink px-6 py-3 text-sm text-ivory transition-colors hover:bg-gilt-deep"
               >
                 Go see it
               </Link>

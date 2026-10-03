@@ -1,8 +1,17 @@
 import { Link, useParams } from 'react-router'
 import Doorway from '../components/Doorway.jsx'
 import NotFound from './NotFound.jsx'
-import { ENTRANCE, findWing } from '../data/museum.js'
+import { ENTRANCE, findWing, roomKey } from '../data/museum.js'
+import { getRoomPaintings, roomPreview } from '../api/collection.js'
+import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
+
+function roomNote(paintings) {
+  if (!paintings.length) return 'Empty for now'
+  const details = paintings.filter((p) => hotspotCount(p.id) > 0).length
+  const base = `${paintings.length} paintings`
+  return details ? `${base}, ${details} with hidden details` : base
+}
 
 export default function Wing() {
   const { wingId } = useParams()
@@ -20,18 +29,20 @@ export default function Wing() {
         <span className="mx-2">/</span>
         <span aria-current="page">{wing.name}</span>
       </nav>
-      <h1 className="mt-6 font-display text-5xl md:text-7xl">{wing.name}</h1>
-      <p className="mt-4 max-w-[50ch] text-lg opacity-90">{wing.blurb}</p>
+      <h1 className="mt-6 font-display text-6xl font-semibold leading-none tracking-tight md:text-8xl">{wing.name}</h1>
+      <p className="mt-5 max-w-[50ch] text-lg opacity-90">{wing.blurb}</p>
 
-      <div className="mt-14 grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-3 md:gap-x-10">
-        {wing.rooms.map((room) => (
+      <div className="mt-16 grid grid-cols-2 gap-x-5 gap-y-14 md:grid-cols-3 md:gap-x-10 lg:grid-cols-4">
+        {wing.rooms.map((room, i) => (
           <Doorway
             key={room.id}
+            index={Math.min(i, 7)}
             to={`/wing/${wing.id}/room/${room.id}`}
-            wall="rgba(0,0,0,0.28)"
-            text={wing.text}
+            wall={wing.wall}
             title={room.name}
             subtitle={room.subtitle}
+            painting={roomPreview(wing.id, room.id)}
+            note={roomNote(getRoomPaintings(roomKey(wing.id, room.id)))}
             tall={false}
           />
         ))}

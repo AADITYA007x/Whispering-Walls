@@ -885,5 +885,389 @@
       "title": "Storm below, calm above",
       "story": "Lightning flashes across the dark lower slopes, while the summit stands above the storm in clear sky."
     }
+  ],
+  "Q1245354": [
+    {
+      "id": "barmaid",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "The barmaid's faraway look",
+      "story": "The barmaid was a real worker at the Folies-Bergère, a lively Paris music hall, who posed for Manet in his studio. Amid all the noise and glitter, she looks tired and lost in thought."
+    },
+    {
+      "id": "mirror",
+      "x": 0.8,
+      "y": 0.33,
+      "title": "A mirror that doesn't add up",
+      "story": "Everything behind her is a reflection in a huge mirror. But her reflection is shifted far to the right, and the man in the top hat should be blocking our view. Manet broke the rules of reflection on purpose, and people still argue about why."
+    },
+    {
+      "id": "feet",
+      "x": 0.07,
+      "y": 0.07,
+      "title": "Feet in the corner",
+      "story": "In the top left corner dangle two small green shoes. They belong to a trapeze artist performing high above the crowd, almost cut out of the picture."
+    },
+    {
+      "id": "bottles",
+      "x": 0.15,
+      "y": 0.6,
+      "title": "Real brands on the bar",
+      "story": "Look at the beer bottles with a red triangle on the label: that is the logo of Bass, a real English beer. It was one of Manet's last major paintings."
+    }
+  ],
+  "Q1452762": [
+    {
+      "id": "lamppost",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Split in two",
+      "story": "A tall lamppost cuts the painting in half, separating the couple walking toward us from the open, rainy square behind them."
+    },
+    {
+      "id": "boulevards",
+      "x": 0.3,
+      "y": 0.35,
+      "title": "A brand-new Paris",
+      "story": "The wide streets and identical stone buildings were brand new, part of a huge rebuilding of Paris in the 1850s and 1860s. Caillebotte painted the modern city as it was being born."
+    }
+  ],
+  "Q1766454": [
+    {
+      "id": "workers",
+      "x": 0.5,
+      "y": 0.6,
+      "title": "Too ordinary for the Salon",
+      "story": "Three shirtless men scrape a wooden floor. The official Paris Salon rejected the painting in 1875, finding working men an unworthy subject, so Caillebotte showed it with the Impressionists instead."
+    }
+  ],
+  "Q2339059": [
+    {
+      "id": "train",
+      "x": 0.68,
+      "y": 0.55,
+      "title": "Speed out of the mist",
+      "story": "A steam train rushes toward us across a bridge over the River Thames. Turner painted it in 1844, when train travel still felt thrilling and new."
+    },
+    {
+      "id": "hare",
+      "x": 0.78,
+      "y": 0.72,
+      "title": "The hidden hare",
+      "story": "Look carefully on the tracks ahead of the train: a small hare is running for its life. Some see it as nature trying to outrun the new machine age."
+    },
+    {
+      "id": "boat",
+      "x": 0.2,
+      "y": 0.68,
+      "title": "The old way of travel",
+      "story": "On the river below, a small boat drifts slowly, a quiet contrast to the roaring speed above."
+    }
+  ],
+  "Q500951": [
+    {
+      "id": "christ",
+      "x": 0.5,
+      "y": 0.35,
+      "title": "A yellow crucifix",
+      "story": "The yellow figure of Christ was inspired by a wooden crucifix in a small chapel near Pont-Aven in Brittany, where Gauguin was working."
+    },
+    {
+      "id": "women",
+      "x": 0.3,
+      "y": 0.75,
+      "title": "Breton women",
+      "story": "Local women in traditional Breton dress sit around the cross. Gauguin used flat areas of strong colour instead of realistic shading, a big step away from Impressionism."
+    }
+  ],
+  "Q1044742": [
+    {
+      "id": "dots",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Made of dots",
+      "story": "The whole painting is built from tiny dots of pure colour, a method called pointillism. Up close you see dots; step back and your eye mixes them into colours. It took Seurat about two years."
+    },
+    {
+      "id": "monkey",
+      "x": 0.82,
+      "y": 0.68,
+      "title": "A monkey on a leash",
+      "story": "The fashionable woman on the right walks a pet monkey on a leash. Exotic pets were a trendy status symbol in 1880s Paris."
+    },
+    {
+      "id": "fishing",
+      "x": 0.2,
+      "y": 0.5,
+      "title": "Fishing on Sunday",
+      "story": "On the left, a woman is fishing at the water's edge. Some historians see a pun here, since the French words for 'to fish' and 'to sin' sound almost the same."
+    },
+    {
+      "id": "border",
+      "x": 0.02,
+      "y": 0.5,
+      "title": "A painted frame",
+      "story": "Look at the edges: Seurat later added a border of dots in darker colours, so the painting has its own built-in frame."
+    }
+  ],
+  "Q890678": [
+    {
+      "id": "baby",
+      "x": 0.9,
+      "y": 0.75,
+      "title": "Reading right to left",
+      "story": "Gauguin meant this huge painting to be read from right to left, like a life story: it begins with a sleeping baby on the right."
+    },
+    {
+      "id": "elder",
+      "x": 0.1,
+      "y": 0.72,
+      "title": "The end of life",
+      "story": "On the far left, an old woman crouches in thought, near the end of her life. Between the baby and her, figures reach, pick fruit and wonder."
+    },
+    {
+      "id": "title",
+      "x": 0.08,
+      "y": 0.08,
+      "title": "The question in the corner",
+      "story": "Gauguin wrote the painting's title in French in the top left corner. He painted it in Tahiti and considered it his greatest work."
+    }
+  ],
+  "Q1219263": [
+    {
+      "id": "lion",
+      "x": 0.6,
+      "y": 0.4,
+      "title": "A curious lion",
+      "story": "A lion sniffs at a sleeping traveller under the moonlight, yet does not attack. The scene feels calm and dreamlike rather than dangerous."
+    },
+    {
+      "id": "rousseau",
+      "x": 0.5,
+      "y": 0.8,
+      "title": "A self-taught painter",
+      "story": "Henri Rousseau worked as a customs official and taught himself to paint. Critics mocked his simple style, but later artists, including Picasso, admired him."
+    }
+  ],
+  "Q3869871": [
+    {
+      "id": "price",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A record-breaking sale",
+      "story": "In 2015 this painting was reportedly sold privately for around 210 million US dollars, among the highest prices ever paid for a work of art."
+    }
+  ],
+  "Q960447": [
+    {
+      "id": "jungle",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A jungle in Paris",
+      "story": "Rousseau never travelled outside France. He imagined his jungles from visits to the botanical gardens and zoo in Paris, and from pictures in books."
+    }
+  ],
+  "Q18210019": [
+    {
+      "id": "celebrities",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "Three famous faces",
+      "story": "These were three real women, celebrated beauties of the city of Edo, today's Tokyo. Prints like this worked a bit like posters of celebrities today."
+    }
+  ],
+  "Q5826309": [
+    {
+      "id": "rain",
+      "x": 0.3,
+      "y": 0.2,
+      "title": "Lines of rain",
+      "story": "Hiroshige shows the downpour with fine dark lines slicing across the sky, while people hurry over the bridge under hats and umbrellas."
+    },
+    {
+      "id": "vangogh",
+      "x": 0.5,
+      "y": 0.55,
+      "title": "Copied by Van Gogh",
+      "story": "Van Gogh loved Japanese prints so much that he painted his own copy of this one in oil, adding a colourful border with Japanese characters."
+    }
+  ],
+  "Q766782": [
+    {
+      "id": "hands",
+      "x": 0.5,
+      "y": 0.55,
+      "title": "A tender gesture",
+      "story": "The man gently rests his hand on the woman's chest, and she touches his hand with her fingers. The gesture is affectionate and protective. Nobody knows for sure who the couple were."
+    },
+    {
+      "id": "sleeve",
+      "x": 0.38,
+      "y": 0.55,
+      "title": "Paint like sculpture",
+      "story": "Rembrandt built up the golden sleeve with very thick paint, almost like carving it. Van Gogh said he would give years of his life to sit in front of this painting for two weeks with only a crust of bread."
+    }
+  ],
+  "Q586035": [
+    {
+      "id": "location",
+      "x": 0.4,
+      "y": 0.4,
+      "title": "The street that was found",
+      "story": "For centuries nobody knew exactly where this little street was. In 2015 a researcher used old tax records to identify the spot in Delft, where Vermeer's aunt had lived."
+    }
+  ],
+  "Q969367": [
+    {
+      "id": "scales",
+      "x": 0.4,
+      "y": 0.55,
+      "title": "Empty scales",
+      "story": "The woman holds a delicate balance, but look closely: its pans are empty. She is not weighing treasure, only waiting for the scale to settle."
+    },
+    {
+      "id": "judgment",
+      "x": 0.72,
+      "y": 0.3,
+      "title": "A painting behind her",
+      "story": "On the wall behind hangs a painting of the Last Judgment, when souls are weighed. It quietly echoes the balance in her hand."
+    }
+  ],
+  "Q700251": [
+    {
+      "id": "cupid",
+      "x": 0.75,
+      "y": 0.35,
+      "title": "The Cupid that came back",
+      "story": "For centuries the wall behind the girl was blank. A restoration completed in 2021 removed paint added by someone else after Vermeer's death, revealing a large picture of Cupid hanging on the wall."
+    },
+    {
+      "id": "reflection",
+      "x": 0.25,
+      "y": 0.35,
+      "title": "Her face in the window",
+      "story": "Look at the open window: the glass reflects the girl's face as she reads her letter."
+    }
+  ],
+  "Q311243": [
+    {
+      "id": "wanderer",
+      "x": 0.5,
+      "y": 0.35,
+      "title": "A figure seen from behind",
+      "story": "The man stands with his back to us, so we look out over the fog with him. This pose became one of the great symbols of the Romantic movement."
+    },
+    {
+      "id": "fog",
+      "x": 0.5,
+      "y": 0.72,
+      "title": "A made-up view",
+      "story": "Friedrich combined sketches of real rocks and peaks in the mountains near Dresden to create this view. No single place looks exactly like it."
+    }
+  ],
+  "Q2366825": [
+    {
+      "id": "wain",
+      "x": 0.35,
+      "y": 0.66,
+      "title": "The hay wain",
+      "story": "A wain is a horse-drawn farm cart. Here it splashes through a shallow river, cooling the horses' hooves and the wooden wheels."
+    },
+    {
+      "id": "cottage",
+      "x": 0.12,
+      "y": 0.45,
+      "title": "A real cottage",
+      "story": "The cottage on the left belonged to a farmer called Willy Lott, and it still stands today in Suffolk, England, near the mill where Constable's father worked."
+    },
+    {
+      "id": "salon",
+      "x": 0.7,
+      "y": 0.3,
+      "title": "A hit in Paris",
+      "story": "When this painting was shown in Paris in 1824 it won a gold medal, and its fresh, natural skies inspired a generation of French painters."
+    }
+  ],
+  "Q2666439": [
+    {
+      "id": "bears",
+      "x": 0.5,
+      "y": 0.7,
+      "title": "A painting with two painters",
+      "story": "Shishkin painted the forest, but the bear cubs were painted by his friend Konstantin Savitsky. The collector Pavel Tretyakov later removed Savitsky's signature, so the work became known as Shishkin's alone."
+    },
+    {
+      "id": "sweets",
+      "x": 0.25,
+      "y": 0.3,
+      "title": "On a famous sweet wrapper",
+      "story": "In Russia this picture became hugely popular as the image on the wrapper of a well-loved chocolate sweet."
+    }
+  ],
+  "Q257580": [
+    {
+      "id": "ship",
+      "x": 0.3,
+      "y": 0.45,
+      "title": "A ghostly warship",
+      "story": "The pale ship is the Temeraire, which fought at the Battle of Trafalgar in 1805. Here it is being towed away to be broken up for scrap, looking almost like a ghost."
+    },
+    {
+      "id": "tug",
+      "x": 0.4,
+      "y": 0.6,
+      "title": "The new age",
+      "story": "A small, dark steam tug pulls the grand old sailing ship. Many see it as the new age of steam replacing the age of sail."
+    },
+    {
+      "id": "sunset",
+      "x": 0.75,
+      "y": 0.5,
+      "title": "Britain's favourite painting",
+      "story": "A blazing sunset seems to say goodbye to the old ship. In 2005 a public vote named this Britain's greatest painting, and it appears on the British twenty-pound note."
+    }
+  ],
+  "Q219344": [
+    {
+      "id": "protest",
+      "x": 0.75,
+      "y": 0.85,
+      "title": "A protest in paint",
+      "story": "This painting is based on a terrible real practice: captains of slave ships throwing enslaved people overboard. Turner showed it in 1840, as campaigners worked to end slavery around the world."
+    }
+  ],
+  "Q194137": [
+    {
+      "id": "wreck",
+      "x": 0.65,
+      "y": 0.62,
+      "title": "A ship crushed by ice",
+      "story": "Half hidden among the jagged slabs of ice lies a wrecked ship. Friedrich was inspired by reports of Arctic expeditions trapped in frozen seas."
+    }
+  ],
+  "Q18683017": [
+    {
+      "id": "meeting",
+      "x": 0.4,
+      "y": 0.4,
+      "title": "A meeting that never happened",
+      "story": "Emperor Jahangir embraces Shah Abbas of Persia, but the two rulers never actually met. The painting is a dream of power, showing Jahangir as the larger, greater ruler."
+    },
+    {
+      "id": "globe",
+      "x": 0.5,
+      "y": 0.85,
+      "title": "Standing on the world",
+      "story": "The rulers stand on a globe, Jahangir on a lion and Shah Abbas on a lamb, a clear message about who held the real strength."
+    }
+  ],
+  "Q22946905": [
+    {
+      "id": "hamzanama",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Part of a giant storybook",
+      "story": "This painting comes from the Hamzanama, a huge illustrated adventure story ordered by Emperor Akbar. It once contained around 1,400 large paintings, made by many artists over about fifteen years."
+    }
   ]
 }

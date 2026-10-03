@@ -11,6 +11,8 @@ export default function Frame({ painting, height }) {
 
   return (
     <figure className="flex shrink-0 snap-center flex-col items-center">
+      <div className="relative">
+      <span className="picture-lamp" aria-hidden="true" />
       <Link
         to={`/painting/${painting.id}`}
         className="gilt-frame relative block transition-transform duration-500 hover:scale-[1.02]"
@@ -24,6 +26,7 @@ export default function Frame({ painting, height }) {
           </span>
         )}
       </Link>
+      </div>
       <figcaption className="mt-5 w-56 bg-ivory px-3 py-2 text-left text-ink shadow-sm">
         <span className="block truncate font-display text-sm font-medium">{painting.title}</span>
         <span className="block truncate text-xs text-ink/70">{byline(painting)}</span>

@@ -42,3 +42,20 @@ export function zoomSources(painting) {
   const large = painting.imageLarge
   return [large?.replace('/1920px-', '/3840px-'), large, painting.image].filter(Boolean)
 }
+
+export function totalPaintings() {
+  return all.length
+}
+
+export function wingPreview(wing) {
+  const ids = wing.rooms.flatMap((r) => data.rooms[`${wing.id}/${r.id}`] || [])
+  return ids.map((id) => data.paintings[id]).filter(Boolean).sort((a, b) => b.fame - a.fame)[0] || null
+}
+
+export function roomPreview(wingId, roomId) {
+  return getRoomPaintings(`${wingId}/${roomId}`)[0] || null
+}
+
+export function mostFamous(filter, limit) {
+  return all.filter(filter).sort((a, b) => b.fame - a.fame).slice(0, limit)
+}

@@ -62,6 +62,7 @@ function buildQuery(f) {
   return `
 SELECT ?item ?itemLabel ?creatorLabel ?image ?year ?article ?links ?collectionLabel WHERE {
   ${parts.join('\n  ')}
+  FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }
   ?item wdt:P18 ?image .
   ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .
   ?item wikibase:sitelinks ?links .
@@ -100,9 +101,9 @@ async function collectRoom(filters) {
     seen.set(id, {
       id,
       title: row.itemLabel.value,
-      artist: row.creatorLabel?.value && !/^Q\d+$/.test(row.creatorLabel.value) ? row.creatorLabel.value : 'Unknown artist',
+      artist: row.creatorLabel?.value && !/^(Q\d+|https?:)/.test(row.creatorLabel.value) ? row.creatorLabel.value : 'Unknown artist',
       year: row.year?.value ? Number(row.year.value) : null,
-      collection: row.collectionLabel?.value && !/^Q\d+$/.test(row.collectionLabel.value) ? row.collectionLabel.value : null,
+      collection: row.collectionLabel?.value && !/^(Q\d+|https?:)/.test(row.collectionLabel.value) ? row.collectionLabel.value : null,
       file: commonsFile(row.image.value),
       article: decodeURIComponent(row.article.value.split('/wiki/')[1]),
       fame: Number(row.links.value),

@@ -81,11 +81,10 @@ export default function Room() {
       )}
       {paintings.length > 0 && (
         <section aria-label={`Paintings in ${room.name}`} className="relative mt-8">
-          <div className="picture-light pointer-events-none absolute inset-x-0 top-0 h-48" />
           <div
             ref={wallRef}
             tabIndex={0}
-            className="no-scrollbar relative flex snap-x snap-mandatory items-end gap-12 overflow-x-auto px-[8vw] pt-14 pb-4 md:gap-20"
+            className="no-scrollbar relative flex snap-x snap-mandatory items-end gap-12 overflow-x-auto px-[8vw] pt-20 pb-4 md:gap-24"
           >
             {paintings.map((painting) => (
               <Frame key={painting.id} painting={painting} height={frameHeight} />

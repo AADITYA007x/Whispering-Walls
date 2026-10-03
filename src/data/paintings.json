@@ -1,5 +1,5 @@
 {
- "collectedAt": "2026-10-03T06:37:00.983Z",
+ "collectedAt": "2026-10-03T07:16:54.324Z",
  "rooms": {
   "time/1400s": [
    "Q151047",
@@ -146,13 +146,11 @@
    "Q2270805"
   ],
   "styles/indian-painting": [
-   "Q2502664",
-   "Q5588580",
    "Q18683017",
    "Q22946905",
-   "Q16611568",
-   "Q115058581",
-   "Q29385249"
+   "Q29385249",
+   "Q132853290",
+   "Q132853402"
   ],
   "styles/japanese-prints": [
    "Q252485",
@@ -1897,36 +1895,6 @@
    "story": "Lise with a Parasol is an oil on canvas painting by French artist Pierre-Auguste Renoir, created in 1867 during his early Salon period. The full-length painting depicts model Lise Tréhot posing in a forest. She wears a white muslin dress and holds a black lace parasol to shade her from the sunlight, which filters down through the leaves, contrasting her face in the shadow and her body in the light, highlighting her dress rather than her face.",
    "wikipedia": "https://en.wikipedia.org/wiki/Lise_with_a_Parasol"
   },
-  "Q2502664": {
-   "id": "Q2502664",
-   "title": "Ustad Mansur",
-   "artist": "Unknown artist",
-   "year": null,
-   "collection": null,
-   "file": "Siberian_Crane_by_Ustad_Mansur_(1).jpg",
-   "article": "Ustad_Mansur",
-   "fame": 14,
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Siberian_Crane_by_Ustad_Mansur_(1).jpg/960px-Siberian_Crane_by_Ustad_Mansur_(1).jpg",
-   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Siberian_Crane_by_Ustad_Mansur_(1).jpg/1920px-Siberian_Crane_by_Ustad_Mansur_(1).jpg",
-   "aspect": 0.8,
-   "story": "Ustad Mansur was a seventeenth-century Indian painter and naturalist who served as a Mughal court artist. During this period, he excelled at depicting plants and animals, was the earliest artist to depict the dodo in colour, and was the first to illustrate the Siberian crane. Towards the end of Akbar's reign, he gained the title of ustad (master) and during the reign of Mughal Emperor Jahangir his masterpieces earned him the title of Nãdir-al-’Asr. Although he was largely known for his natural history illustrations, he also portrayed people in various manuscript illustrations.",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ustad_Mansur"
-  },
-  "Q5588580": {
-   "id": "Q5588580",
-   "title": "Govardhan",
-   "artist": "Unknown artist",
-   "year": null,
-   "collection": null,
-   "file": "Govardhan._Shah_Jahan_and_Dara_Shikoh_ca._1638._Victoria_and_Albert_Museum.jpg",
-   "article": "Govardhan_(artist)",
-   "fame": 9,
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Govardhan._Shah_Jahan_and_Dara_Shikoh_ca._1638._Victoria_and_Albert_Museum.jpg/960px-Govardhan._Shah_Jahan_and_Dara_Shikoh_ca._1638._Victoria_and_Albert_Museum.jpg",
-   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Govardhan._Shah_Jahan_and_Dara_Shikoh_ca._1638._Victoria_and_Albert_Museum.jpg/1920px-Govardhan._Shah_Jahan_and_Dara_Shikoh_ca._1638._Victoria_and_Albert_Museum.jpg",
-   "aspect": 0.75,
-   "story": "Govardhan was a Mughal era Indian painter of the Mughal school of painting. His father Bhavani Das, had been a minor painter in the imperial workshop. Like many other Mughal painters, they were Hindus. He joined the imperial service during the reign of Akbar and he continued his work till the reign of Shah Jahan. The examples of his work that are still extant show that he was fond of rich, sensuous colour and softly modelled forms.",
-   "wikipedia": "https://en.wikipedia.org/wiki/Govardhan_(artist)"
-  },
   "Q18683017": {
    "id": "Q18683017",
    "title": "Emperor Jahangir Embraces Shah Abbas",
@@ -1956,36 +1924,6 @@
    "aspect": 0.78,
    "story": "Umar Defeats a Dragon is a page from a Mughal Illuminated manuscript illustrating an episode from the Hamzanama. The page size is 55 x 70 cm. It is in the collection of the Museum of Applied Arts, Vienna, Vienna.",
    "wikipedia": "https://en.wikipedia.org/wiki/Umar_Defeats_a_Dragon"
-  },
-  "Q16611568": {
-   "id": "Q16611568",
-   "title": "Manaku",
-   "artist": "Unknown artist",
-   "year": null,
-   "collection": null,
-   "file": "Manaku_of_guler.jpg",
-   "article": "Manaku_of_Guler",
-   "fame": 3,
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Manaku_of_guler.jpg/960px-Manaku_of_guler.jpg",
-   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Manaku_of_guler.jpg/1920px-Manaku_of_guler.jpg",
-   "aspect": 0.801,
-   "story": "Manaku of Guler or Manaku was an Indian painter from the Guler State, in modern-day Himachal Pradesh. After his death he was mostly forgotten and overshadowed by his much-celebrated younger brother Nainsukh. But today he is recognised as an exponent of Pahari style of painting, much like his brother. The rediscovery of Manaku has been a result of research efforts by art historians like B. N. Goswamy. \nLike Nainsukh, Manaku almost never signed his works, and only four extant works carry his signature. He was a member of the Seu-Manaku-Nainsukh family.",
-   "wikipedia": "https://en.wikipedia.org/wiki/Manaku_of_Guler"
-  },
-  "Q115058581": {
-   "id": "Q115058581",
-   "title": "Pandit Seu",
-   "artist": "Unknown artist",
-   "year": null,
-   "collection": null,
-   "file": "Portrait_of_Pandit_Seu,_by_Nainsukh,_ca.1735–40.jpg",
-   "article": "Seu_(artist)",
-   "fame": 2,
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Pandit_Seu%2C_by_Nainsukh%2C_ca.1735%E2%80%9340.jpg/960px-Portrait_of_Pandit_Seu%2C_by_Nainsukh%2C_ca.1735%E2%80%9340.jpg",
-   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Pandit_Seu%2C_by_Nainsukh%2C_ca.1735%E2%80%9340.jpg/1920px-Portrait_of_Pandit_Seu%2C_by_Nainsukh%2C_ca.1735%E2%80%9340.jpg",
-   "aspect": 0.811,
-   "story": "Seu, also known as Pandit Seu, was a Pahari artist who specialized in musawir. He was attached to the court of Raja Dilip Singh of Guler State. He was a member of the Seu-Manaku-Nainsukh family.",
-   "wikipedia": "https://en.wikipedia.org/wiki/Seu_(artist)"
   },
   "Q29385249": {
    "id": "Q29385249",
@@ -5616,6 +5554,36 @@
    "aspect": 0.814,
    "story": "Model by the Wicker Chair is an oil on canvas painting by the Norwegian artist Edvard Munch, from 1919-1921. It is held in the Munch Museum, in Oslo.",
    "wikipedia": "https://en.wikipedia.org/wiki/Model_by_the_Wicker_Chair"
+  },
+  "Q132853290": {
+   "id": "Q132853290",
+   "title": "Ibrahim Adil Shah II hawking",
+   "artist": "Farrukh Beg",
+   "year": 1590,
+   "collection": "Institute of Oriental Manuscripts of the Russian Academy of Sciences",
+   "file": "Farrukh_Beg._Sultan_Ibrahim_Adil_Shah_II_Khan_hawking._Page_from_St._Petersburg_Album._Bijapur_ca.1590-95_(28,7x15,6cm)_Institute_of_Oriental_Studies_St._Petersburg.jpg",
+   "article": "Ibrahim_Adil_Shah_II_Hawking",
+   "fame": 2,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Farrukh_Beg._Sultan_Ibrahim_Adil_Shah_II_Khan_hawking._Page_from_St._Petersburg_Album._Bijapur_ca.1590-95_(28%2C7x15%2C6cm)_Institute_of_Oriental_Studies_St._Petersburg.jpg/960px-Farrukh_Beg._Sultan_Ibrahim_Adil_Shah_II_Khan_hawking._Page_from_St._Petersburg_Album._Bijapur_ca.1590-95_(28%2C7x15%2C6cm)_Institute_of_Oriental_Studies_St._Petersburg.jpg",
+   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Farrukh_Beg._Sultan_Ibrahim_Adil_Shah_II_Khan_hawking._Page_from_St._Petersburg_Album._Bijapur_ca.1590-95_(28%2C7x15%2C6cm)_Institute_of_Oriental_Studies_St._Petersburg.jpg/1920px-Farrukh_Beg._Sultan_Ibrahim_Adil_Shah_II_Khan_hawking._Page_from_St._Petersburg_Album._Bijapur_ca.1590-95_(28%2C7x15%2C6cm)_Institute_of_Oriental_Studies_St._Petersburg.jpg",
+   "aspect": 0.585,
+   "story": "Ibrahim Adil Shah II Hawking is a Deccan painting created in India by the Persian painter Farrukh Beg in the early 1590s. It depicts Ibrahim Adil Shah II, the ruler of the Bijapur Sultanate, as a young man riding a horse through a meadow. The work is now in the Institute of Oriental Studies of the Russian Academy of Sciences in St. Petersburg, as part of the \"St Petersburg Album\" of Indian miniatures.",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ibrahim_Adil_Shah_II_Hawking"
+  },
+  "Q132853402": {
+   "id": "Q132853402",
+   "title": "Jahangir Shooting the Head of Malik Ambar",
+   "artist": "Abu al-Hasan",
+   "year": 1620,
+   "collection": "Chester Beatty Library",
+   "file": "Jahangir_Shooting_the_Head_of_Malik_Ambar,_Chester_Beatty_Library.png",
+   "article": "Jahangir_Shooting_the_Head_of_Malik_Ambar",
+   "fame": 2,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jahangir_Shooting_the_Head_of_Malik_Ambar%2C_Chester_Beatty_Library.png/960px-Jahangir_Shooting_the_Head_of_Malik_Ambar%2C_Chester_Beatty_Library.png",
+   "imageLarge": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jahangir_Shooting_the_Head_of_Malik_Ambar%2C_Chester_Beatty_Library.png/1920px-Jahangir_Shooting_the_Head_of_Malik_Ambar%2C_Chester_Beatty_Library.png",
+   "aspect": 0.68,
+   "story": "Jahangir Shooting the Head of Malik Ambar is a Mughal painting by the artist Abu'l-Hasan. It is located in the Chester Beatty Library.",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jahangir_Shooting_the_Head_of_Malik_Ambar"
   }
  }
 }
