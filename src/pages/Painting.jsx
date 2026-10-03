@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import DeepZoom from '../components/DeepZoom.jsx'
 import HotspotEditor from '../components/HotspotEditor.jsx'
+import AskPainting from '../components/AskPainting.jsx'
 import NotFound from './NotFound.jsx'
 import { VIEWING_ROOM } from '../data/museum.js'
 import { getPainting } from '../api/collection.js'
@@ -264,6 +265,7 @@ function PaintingView({ painting }) {
               </a>
             </>
           )}
+          {!editing && <AskPainting painting={painting} />}
         </div>
       </article>
     </div>
