@@ -28,7 +28,7 @@ DAILY_LIMIT = 1000
 log = logging.getLogger('uvicorn.error')
 client = genai.Client(api_key=API_KEY) if API_KEY and PROVIDER == "gemini" else None
 app = FastAPI(title="Whispering Walls")
-app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
+app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=["GET", "HEAD", "POST"], allow_headers=["Content-Type"])
 
 visitors: dict[str, deque] = {}
 daily = {"day": time.strftime("%Y-%m-%d"), "count": 0}
@@ -80,7 +80,7 @@ def notes_block(chunks):
     return "\n\n".join(f"[{c['section']}]\n{c['text']}" for c in chunks)
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"ok": True, "provider": PROVIDER, "model": MODEL, "key_configured": bool(API_KEY), "paintings": len(knowledge.load())}
 
