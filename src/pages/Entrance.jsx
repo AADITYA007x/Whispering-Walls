@@ -13,13 +13,14 @@ import {
   hasCollection,
   mostFamous,
   totalPaintings,
-  wingPreview,
+  wingPreviews,
 } from '../api/collection.js'
 import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
 import { useMediaQuery } from '../hooks/useMediaQuery.js'
 
 const roomCount = WINGS.reduce((n, w) => n + w.rooms.length, 0)
+const DOOR_WIDTH = 'w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)]'
 
 export default function Entrance() {
   useWall(ENTRANCE.wall, ENTRANCE.text)
@@ -28,6 +29,7 @@ export default function Entrance() {
   const featured = getPaintingOfTheDay()
   const whispering = mostFamous((p) => hotspotCount(p.id) > 0, 14)
   const total = totalPaintings()
+  const previews = wingPreviews(WINGS)
   const withDetails = mostFamous((p) => hotspotCount(p.id) > 0, 10000).length
   const [mysteryPainting] = useState(() => getRandomPainting(featured?.id))
 
@@ -54,10 +56,11 @@ export default function Entrance() {
         )}
       </section>
 
-      <nav aria-label="Museum wings" className="mx-auto grid max-w-6xl grid-cols-2 gap-x-5 gap-y-12 px-5 md:grid-cols-4 md:gap-8 md:px-8">
+      <nav aria-label="Museum wings" className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-12 px-5 md:gap-x-8 md:px-8">
         {WINGS.map((wing, i) => {
-          const preview = wingPreview(wing)
+          const preview = previews[wing.id]
           return (
+            <div key={wing.id} className={DOOR_WIDTH}>
             <Doorway
               key={wing.id}
               index={i}
@@ -68,8 +71,10 @@ export default function Entrance() {
               painting={preview}
               note={preview ? `Through this door: ${preview.title}` : null}
             />
+            </div>
           )
         })}
+        <div className={DOOR_WIDTH}>
         <Doorway
           index={WINGS.length}
           onClick={surprise}
@@ -81,6 +86,7 @@ export default function Entrance() {
           note="No peeking"
           mystery
         />
+        </div>
       </nav>
 
       {whispering.length > 0 && (

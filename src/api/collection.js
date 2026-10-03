@@ -58,13 +58,35 @@ export function totalPaintings() {
   return all.length
 }
 
-export function wingPreview(wing) {
-  const ids = wing.rooms.flatMap((r) => data.rooms[`${wing.id}/${r.id}`] || [])
-  return ids.filter((id) => !hidden.has(id)).map((id) => data.paintings[id]).filter(Boolean).sort((a, b) => b.fame - a.fame)[0] || null
+function byFame(ids) {
+  return ids
+    .filter((id) => !hidden.has(id))
+    .map((id) => data.paintings[id])
+    .filter(Boolean)
+    .sort((a, b) => b.fame - a.fame)
 }
 
-export function roomPreview(wingId, roomId) {
-  return getRoomPaintings(`${wingId}/${roomId}`)[0] || null
+export function wingPreviews(wings) {
+  const used = new Set()
+  const result = {}
+  for (const wing of wings) {
+    const ids = wing.rooms.flatMap((r) => data.rooms[`${wing.id}/${r.id}`] || [])
+    const pick = byFame(ids).find((p) => !used.has(p.id)) || null
+    if (pick) used.add(pick.id)
+    result[wing.id] = pick
+  }
+  return result
+}
+
+export function roomPreviews(wing) {
+  const used = new Set()
+  const result = {}
+  for (const room of wing.rooms) {
+    const pick = getRoomPaintings(`${wing.id}/${room.id}`).find((p) => !used.has(p.id)) || null
+    if (pick) used.add(pick.id)
+    result[room.id] = pick
+  }
+  return result
 }
 
 export function mostFamous(filter, limit) {

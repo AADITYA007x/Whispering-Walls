@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router'
 import Doorway from '../components/Doorway.jsx'
 import NotFound from './NotFound.jsx'
 import { ENTRANCE, findWing, roomKey } from '../data/museum.js'
-import { getRoomPaintings, roomPreview } from '../api/collection.js'
+import { getRoomPaintings, roomPreviews } from '../api/collection.js'
 import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
 
@@ -19,6 +19,7 @@ export default function Wing() {
   useWall(wing?.wall ?? ENTRANCE.wall, wing?.text ?? ENTRANCE.text)
 
   if (!wing) return <NotFound />
+  const previews = roomPreviews(wing)
 
   return (
     <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -32,8 +33,9 @@ export default function Wing() {
       <h1 className="mt-6 font-display text-6xl font-semibold leading-none tracking-tight md:text-8xl">{wing.name}</h1>
       <p className="mt-5 max-w-[50ch] text-lg opacity-90">{wing.blurb}</p>
 
-      <div className="mt-16 grid grid-cols-2 gap-x-5 gap-y-14 md:grid-cols-3 md:gap-x-10 lg:grid-cols-4">
+      <div className="mt-16 flex flex-wrap justify-center gap-x-6 gap-y-14 md:gap-x-10">
         {wing.rooms.map((room, i) => (
+          <div key={room.id} className="w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1.75rem)] lg:w-[calc(25%-1.875rem)]">
           <Doorway
             key={room.id}
             index={Math.min(i, 7)}
@@ -41,10 +43,11 @@ export default function Wing() {
             wall={wing.wall}
             title={room.name}
             subtitle={room.subtitle}
-            painting={roomPreview(wing.id, room.id)}
+            painting={previews[room.id]}
             note={roomNote(getRoomPaintings(roomKey(wing.id, room.id)))}
             tall={false}
           />
+          </div>
         ))}
       </div>
     </div>
