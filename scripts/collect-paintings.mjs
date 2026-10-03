@@ -86,29 +86,67 @@ function thumbUrl(file, width) {
   return `https://upload.wikimedia.org/wikipedia/commons/thumb/${hash[0]}/${hash.slice(0, 2)}/${name}/${width}px-${suffix}`
 }
 
-async function collectRoom(filters) {
-  const url = `${SPARQL}?format=json&query=${encodeURIComponent(buildQuery(filters))}`
+function toPainting(row) {
+  return {
+    id: row.item.value.split('/').pop(),
+    title: row.itemLabel.value,
+    artist: row.creatorLabel?.value && !/^(Q\d+|https?:)/.test(row.creatorLabel.value) ? row.creatorLabel.value : 'Unknown artist',
+    year: row.year?.value ? Number(row.year.value) : null,
+    collection: row.collectionLabel?.value && !/^(Q\d+|https?:)/.test(row.collectionLabel.value) ? row.collectionLabel.value : null,
+    file: commonsFile(row.image.value),
+    article: decodeURIComponent(row.article.value.split('/wiki/')[1]),
+    fame: Number(row.links.value),
+  }
+}
+
+function includeQuery({ title, artist }) {
+  return `
+SELECT ?item ?itemLabel ?creatorLabel ?image ?year ?article ?links ?collectionLabel WHERE {
+  ?item rdfs:label ${literals([title])} ; wdt:P170 ?creator .
+  ?creator rdfs:label ${literals([artist])} .
+  ?item wdt:P18 ?image .
+  ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> .
+  ?item wikibase:sitelinks ?links .
+  OPTIONAL { ?item wdt:P571 ?inception . }
+  BIND(YEAR(?inception) AS ?year)
+  OPTIONAL { ?item wdt:P195 ?collection . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY DESC(?links)
+LIMIT 3`
+}
+
+async function runQuery(query) {
+  const url = `${SPARQL}?format=json&query=${encodeURIComponent(query)}`
   const json = await request(url, { headers: { Accept: 'application/sparql-results+json' } })
+  return json.results.bindings
+}
+
+async function collectRoom(filters) {
   const seen = new Map()
+  for (const wanted of filters.include || []) {
+    const rows = await runQuery(includeQuery(wanted)).catch(() => [])
+    const row = rows.find((r) => !/^Q\d+$/.test(r.itemLabel?.value || ''))
+    if (row) {
+      const painting = toPainting(row)
+      seen.set(painting.id, painting)
+    } else {
+      console.log(`\n  (could not find "${wanted.title}" by ${wanted.artist})`)
+    }
+    await sleep(800)
+  }
   const perArtist = new Map()
-  for (const row of json.results.bindings) {
+  for (const p of seen.values()) perArtist.set(p.artist, (perArtist.get(p.artist) || 0) + 1)
+  const rows = filters.includeOnly ? [] : await runQuery(buildQuery(filters))
+  for (const row of rows) {
+    if (seen.size >= PER_ROOM) break
     const id = row.item.value.split('/').pop()
     if (seen.has(id)) continue
+    if (/^Q\d+$/.test(row.itemLabel?.value || '')) continue
     const creator = row.creatorLabel?.value || 'unknown'
     if (filters.perArtist && (perArtist.get(creator) || 0) >= filters.perArtist) continue
     perArtist.set(creator, (perArtist.get(creator) || 0) + 1)
-    if (/^Q\d+$/.test(row.itemLabel?.value || '')) continue
-    seen.set(id, {
-      id,
-      title: row.itemLabel.value,
-      artist: row.creatorLabel?.value && !/^(Q\d+|https?:)/.test(row.creatorLabel.value) ? row.creatorLabel.value : 'Unknown artist',
-      year: row.year?.value ? Number(row.year.value) : null,
-      collection: row.collectionLabel?.value && !/^(Q\d+|https?:)/.test(row.collectionLabel.value) ? row.collectionLabel.value : null,
-      file: commonsFile(row.image.value),
-      article: decodeURIComponent(row.article.value.split('/wiki/')[1]),
-      fame: Number(row.links.value),
-    })
-    if (seen.size >= PER_ROOM) break
+    seen.set(id, toPainting(row))
   }
   return [...seen.values()]
 }

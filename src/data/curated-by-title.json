@@ -1,0 +1,105 @@
+{
+  "the scream|munch": [
+    {
+      "id": "figure",
+      "x": 0.45,
+      "y": 0.6,
+      "title": "Not the one screaming",
+      "story": "Munch described walking at sunset when he felt 'an infinite scream passing through nature'. So the figure isn't screaming; it is covering its ears against a scream it hears all around it."
+    },
+    {
+      "id": "sky",
+      "x": 0.5,
+      "y": 0.18,
+      "title": "A blood-red sky",
+      "story": "The swirling red and orange sky has puzzled people for years. Some think Munch remembered the vivid sunsets seen across Europe after the Krakatoa volcano erupted in 1883; others think it simply shows how he felt."
+    },
+    {
+      "id": "writing",
+      "x": 0.1,
+      "y": 0.12,
+      "title": "Tiny writing in the corner",
+      "story": "Faint pencil writing in the top left corner says it 'can only have been painted by a madman'. In 2021, experts confirmed the handwriting was Munch's own, likely added after critics questioned his mental health."
+    },
+    {
+      "id": "bridge",
+      "x": 0.2,
+      "y": 0.45,
+      "title": "Two figures walking away",
+      "story": "Behind the figure, two people stroll calmly along the railing. Munch wrote that his friends walked on while he stood trembling with anxiety, completely alone with the feeling."
+    }
+  ],
+  "judith slaying holofernes|gentileschi": [
+    {
+      "id": "together",
+      "x": 0.42,
+      "y": 0.35,
+      "title": "Two women, working together",
+      "story": "Unlike many earlier versions, Artemisia shows Judith and her servant acting together with strength and determination, not as fragile figures."
+    },
+    {
+      "id": "artemisia",
+      "x": 0.5,
+      "y": 0.6,
+      "title": "A painter who refused to be silenced",
+      "story": "Artemisia Gentileschi was one of the most successful painters of her age and the first woman admitted to Florence's Academy of Fine Arts. Many see personal courage in this painting, made after she endured a public trial in which she accused her teacher of assault."
+    }
+  ],
+  "the horse fair|bonheur": [
+    {
+      "id": "permit",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A permit to wear trousers",
+      "story": "To sketch freely at the noisy Paris horse market, Rosa Bonheur obtained official permission from the police to wear trousers, which women were otherwise forbidden to do in public."
+    },
+    {
+      "id": "horses",
+      "x": 0.65,
+      "y": 0.4,
+      "title": "Painted from life",
+      "story": "Bonheur spent about a year and a half making studies of real horses. The huge canvas made her famous across Europe and America."
+    }
+  ],
+  "the cradle|morisot": [
+    {
+      "id": "sister",
+      "x": 0.32,
+      "y": 0.35,
+      "title": "A sister watching",
+      "story": "The mother is Morisot's sister Edma, gazing at her sleeping baby. Edma had also been a painter, but gave it up after marriage."
+    },
+    {
+      "id": "veil",
+      "x": 0.62,
+      "y": 0.55,
+      "title": "A see-through veil",
+      "story": "Look at the soft white curtain draped over the cradle. Morisot painted its transparency with light, quick strokes. She was the only woman among the founding group at the first Impressionist exhibition in 1874."
+    }
+  ],
+  "the childs bath|cassatt": [
+    {
+      "id": "above",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "Looking down from above",
+      "story": "We see the mother and child from above, with the floor tilting up toward us. Cassatt borrowed this unusual viewpoint from the Japanese prints she admired."
+    },
+    {
+      "id": "patterns",
+      "x": 0.4,
+      "y": 0.65,
+      "title": "Bold patterns",
+      "story": "The striped dress, the patterned rug and the painted jug create flat, decorative areas of pattern, another idea inspired by Japanese art."
+    }
+  ],
+  "marie antoinette with a rose|le brun": [
+    {
+      "id": "rose",
+      "x": 0.45,
+      "y": 0.55,
+      "title": "A safer portrait",
+      "story": "Shortly before this, Vigée Le Brun had painted the queen in a simple cotton dress, which caused a scandal. This formal portrait in silk, holding a rose, was made to calm the critics."
+    }
+  ]
+}

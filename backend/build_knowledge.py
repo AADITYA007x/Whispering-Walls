@@ -1,6 +1,7 @@
 import json
 import re
 import time
+import unicodedata
 from pathlib import Path
 
 import httpx
@@ -9,6 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PAINTINGS = ROOT / "src" / "data" / "paintings.json"
 HOTSPOTS = ROOT / "src" / "data" / "hotspots.json"
 CURATED = ROOT / "src" / "data" / "curated-hotspots.json"
+BY_TITLE = ROOT / "src" / "data" / "curated-by-title.json"
 OUTPUT = Path(__file__).resolve().parent / "data" / "knowledge.json"
 
 API = "https://en.wikipedia.org/w/api.php"
@@ -46,6 +48,20 @@ def fetch_article(client, title):
     return "", reason
 
 
+def normalize(text):
+    text = unicodedata.normalize("NFD", text or "")
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    text = re.sub(r"\(.*?\)", "", text).lower()
+    text = re.sub(r"[^a-z0-9 ]", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def title_keys(painting):
+    words = normalize(painting.get("artist", "")).split(" ")
+    title = normalize(painting.get("title", ""))
+    return [f"{title}|{' '.join(words[-2:])}", f"{title}|{words[-1]}"]
+
+
 def chunk_article(text):
     chunks = []
     section = "Introduction"
@@ -76,6 +92,7 @@ def main():
     paintings = json.loads(PAINTINGS.read_text(encoding="utf-8"))["paintings"]
     curated = json.loads(CURATED.read_text(encoding="utf-8")) if CURATED.exists() else {}
     yours = json.loads(HOTSPOTS.read_text(encoding="utf-8")) if HOTSPOTS.exists() else {}
+    by_title = json.loads(BY_TITLE.read_text(encoding="utf-8")) if BY_TITLE.exists() else {}
     hotspots = {**curated, **yours}
     knowledge = {}
     failures = {}
@@ -90,7 +107,8 @@ def main():
             chunks = chunk_article(text) if text else []
             if not chunks and p.get("story"):
                 chunks = [{"section": "Introduction", "text": p["story"]}]
-            for spot in hotspots.get(pid, []):
+            spots = hotspots.get(pid) or next((by_title[k] for k in title_keys(p) if k in by_title), [])
+            for spot in spots:
                 chunks.append({"section": f"Detail: {spot['title']}", "text": spot["story"]})
             knowledge[pid] = {
                 "title": p["title"],
