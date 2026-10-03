@@ -1,18 +1,20 @@
 import data from '../data/paintings.json'
 import { hotspotCount } from './hotspots.js'
+import { HIDDEN_PAINTINGS } from '../data/museum.js'
 
-const all = Object.values(data.paintings)
+const hidden = new Set(HIDDEN_PAINTINGS)
+const all = Object.values(data.paintings).filter((p) => !hidden.has(p.id))
 
 export function hasCollection() {
   return all.length > 0
 }
 
 export function getRoomPaintings(key) {
-  return (data.rooms[key] || []).map((id) => data.paintings[id]).filter(Boolean)
+  return (data.rooms[key] || []).filter((id) => !hidden.has(id)).map((id) => data.paintings[id]).filter(Boolean)
 }
 
 export function getPainting(id) {
-  return data.paintings[id] || null
+  return hidden.has(id) ? null : data.paintings[id] || null
 }
 
 function showcase() {
@@ -24,7 +26,8 @@ function showcase() {
 export function getPaintingOfTheDay() {
   const pool = showcase()
   if (!pool.length) return null
-  const day = Math.floor(Date.now() / 86400000)
+  const now = new Date()
+  const day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000)
   return pool[day % pool.length]
 }
 
@@ -57,7 +60,7 @@ export function totalPaintings() {
 
 export function wingPreview(wing) {
   const ids = wing.rooms.flatMap((r) => data.rooms[`${wing.id}/${r.id}`] || [])
-  return ids.map((id) => data.paintings[id]).filter(Boolean).sort((a, b) => b.fame - a.fame)[0] || null
+  return ids.filter((id) => !hidden.has(id)).map((id) => data.paintings[id]).filter(Boolean).sort((a, b) => b.fame - a.fame)[0] || null
 }
 
 export function roomPreview(wingId, roomId) {

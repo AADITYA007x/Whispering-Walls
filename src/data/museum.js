@@ -75,3 +75,8 @@ export function findRoom(wingId, roomId) {
 export function roomKey(wingId, roomId) {
   return `${wingId}/${roomId}`
 }
+
+export const HIDDEN_PAINTINGS = [
+  'Q334138',
+  'Q2717022',
+]

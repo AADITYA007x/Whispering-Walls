@@ -1269,5 +1269,582 @@
       "title": "Part of a giant storybook",
       "story": "This painting comes from the Hamzanama, a huge illustrated adventure story ordered by Emperor Akbar. It once contained around 1,400 large paintings, made by many artists over about fifteen years."
     }
+  ],
+  "Q321303": [
+    {
+      "id": "eden",
+      "x": 0.14,
+      "y": 0.5,
+      "title": "Paradise on the left",
+      "story": "The left panel shows the Garden of Eden, with God introducing Adam to Eve. Even here, Bosch slips in strange creatures, hinting at trouble to come."
+    },
+    {
+      "id": "fruit",
+      "x": 0.5,
+      "y": 0.45,
+      "title": "A garden of giant fruit",
+      "story": "In the centre panel, crowds of people play among giant strawberries, birds and shells. Nobody agrees what it all means, which is part of its fascination five hundred years later."
+    },
+    {
+      "id": "treeman",
+      "x": 0.83,
+      "y": 0.38,
+      "title": "The tree-man",
+      "story": "In the dark right panel, a strange figure with a hollow eggshell body and tree-trunk legs looks back over his shoulder. Some believe his face is a self-portrait of Bosch."
+    }
+  ],
+  "Q220859": [
+    {
+      "id": "mirror",
+      "x": 0.5,
+      "y": 0.45,
+      "title": "A mirror that shows more",
+      "story": "The round mirror on the back wall reflects the couple from behind, plus two more people standing in the doorway, where we would be. One of them may be the painter himself."
+    },
+    {
+      "id": "signature",
+      "x": 0.5,
+      "y": 0.33,
+      "title": "Jan van Eyck was here",
+      "story": "Above the mirror, in fancy lettering, van Eyck wrote in Latin 'Jan van Eyck was here, 1434', more like a witness's signature than an artist's."
+    },
+    {
+      "id": "dog",
+      "x": 0.5,
+      "y": 0.86,
+      "title": "The little dog",
+      "story": "A small dog stands at the couple's feet. Dogs often symbolised loyalty, and this one is painted hair by hair."
+    },
+    {
+      "id": "candle",
+      "x": 0.5,
+      "y": 0.1,
+      "title": "One candle burning",
+      "story": "In the brass chandelier, only one candle is lit, even though it is daytime. Its meaning is still debated."
+    }
+  ],
+  "Q734834": [
+    {
+      "id": "lamb",
+      "x": 0.5,
+      "y": 0.75,
+      "title": "The mystic lamb",
+      "story": "In the lower centre, crowds gather around a lamb on an altar, a symbol of Christ. A recent restoration revealed the lamb's original, surprisingly human-looking face, which had been painted over centuries ago."
+    },
+    {
+      "id": "judges",
+      "x": 0.08,
+      "y": 0.8,
+      "title": "The panel still missing",
+      "story": "The lower left panel, called the Just Judges, was stolen in 1934 and has never been found. What you see there is a copy."
+    },
+    {
+      "id": "stolen",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "The most stolen artwork?",
+      "story": "This altarpiece has been looted, sold, hidden and recovered many times. During the Second World War, the Nazis took it and stored it in a salt mine in Austria, where Allied forces recovered it in 1945."
+    }
+  ],
+  "Q546297": [
+    {
+      "id": "feet",
+      "x": 0.5,
+      "y": 0.82,
+      "title": "Seen from the feet",
+      "story": "Mantegna painted Christ's body from a dramatic low angle, feet first, squeezing a whole body into a short space. This bold trick is called foreshortening."
+    }
+  ],
+  "Q1267893": [
+    {
+      "id": "juniper",
+      "x": 0.3,
+      "y": 0.3,
+      "title": "A plant that spells her name",
+      "story": "Behind Ginevra grows a spiky juniper bush. The Italian word for juniper, 'ginepro', sounds like her name, a clever visual pun."
+    },
+    {
+      "id": "america",
+      "x": 0.6,
+      "y": 0.6,
+      "title": "Leonardo in America",
+      "story": "This is the only painting by Leonardo da Vinci on public display in the Americas, at the National Gallery of Art in Washington."
+    }
+  ],
+  "Q500985": [
+    {
+      "id": "hunters",
+      "x": 0.2,
+      "y": 0.35,
+      "title": "A poor day's hunting",
+      "story": "Tired hunters trudge home through the snow with their dogs, carrying just one small fox. It hasn't been a good day."
+    },
+    {
+      "id": "skaters",
+      "x": 0.62,
+      "y": 0.68,
+      "title": "Fun on the ice",
+      "story": "Down in the valley, tiny figures skate, play and fall on the frozen ponds. Bruegel fills the cold scene with everyday life."
+    },
+    {
+      "id": "sign",
+      "x": 0.3,
+      "y": 0.25,
+      "title": "A sign about to fall",
+      "story": "Outside the inn on the left, the signboard hangs loose from one hook. It is one of many small, real details that make this winter feel lived in."
+    }
+  ],
+  "Q533619": [
+    {
+      "id": "proverbs",
+      "x": 0.3,
+      "y": 0.3,
+      "title": "Over 100 sayings",
+      "story": "This village is packed with more than 100 Dutch proverbs acted out literally, like a man banging his head against a wall. It works like a giant visual puzzle."
+    },
+    {
+      "id": "cloak",
+      "x": 0.5,
+      "y": 0.55,
+      "title": "The blue cloak",
+      "story": "A woman drapes a blue cloak over her husband. In old Dutch, this meant she was deceiving him, and the painting was sometimes called The Blue Cloak."
+    }
+  ],
+  "Q1212937": [
+    {
+      "id": "skull",
+      "x": 0.5,
+      "y": 0.85,
+      "title": "The hidden skull",
+      "story": "The strange smear across the floor is a stretched skull. Stand to the side of the painting and look along it, and the skull snaps into shape, a reminder of death amid all this wealth."
+    },
+    {
+      "id": "lute",
+      "x": 0.62,
+      "y": 0.62,
+      "title": "A broken string",
+      "story": "On the lower shelf lies a lute with one broken string, often read as a sign of disharmony, at a time when Europe was splitting over religion."
+    },
+    {
+      "id": "crucifix",
+      "x": 0.03,
+      "y": 0.04,
+      "title": "A half-hidden cross",
+      "story": "In the very top left corner, a small crucifix peeks out from behind the green curtain."
+    }
+  ],
+  "Q930137": [
+    {
+      "id": "mystery",
+      "x": 0.6,
+      "y": 0.25,
+      "title": "A painting nobody can explain",
+      "story": "Lightning splits the sky over a city while a soldier and a mother with a baby ignore each other. Scholars have offered dozens of explanations, and none has won."
+    },
+    {
+      "id": "xray",
+      "x": 0.2,
+      "y": 0.62,
+      "title": "A changed mind",
+      "story": "X-rays show that Giorgione first painted a woman bathing where the soldier now stands, then changed his mind."
+    }
+  ],
+  "Q727875": [
+    {
+      "id": "maids",
+      "x": 0.78,
+      "y": 0.35,
+      "title": "The maids in the background",
+      "story": "In the room behind, two maids search a large chest, likely for clothes. Chests like this were part of a bride's dowry, so many think the painting celebrates a marriage."
+    }
+  ],
+  "Q563727": [
+    {
+      "id": "lamb",
+      "x": 0.75,
+      "y": 0.68,
+      "title": "The child and the lamb",
+      "story": "The baby Jesus grabs a lamb, a symbol of his future sacrifice, while his mother gently tries to hold him back. Leonardo worked on this painting for years and never quite finished it."
+    }
+  ],
+  "Q208758": [
+    {
+      "id": "painter",
+      "x": 0.15,
+      "y": 0.45,
+      "title": "The painter paints himself",
+      "story": "On the left, Velázquez stands at a huge canvas, brush in hand, looking straight out at us. The red cross on his chest was added later, after he was made a knight."
+    },
+    {
+      "id": "mirror",
+      "x": 0.45,
+      "y": 0.4,
+      "title": "The king and queen in the mirror",
+      "story": "On the back wall, a small mirror reflects the king and queen of Spain. They seem to stand exactly where you are, so you become part of the scene."
+    },
+    {
+      "id": "infanta",
+      "x": 0.5,
+      "y": 0.6,
+      "title": "The little princess",
+      "story": "At the centre stands the five-year-old Princess Margaret Theresa, attended by her maids of honour, the 'meninas' who give the painting its name."
+    },
+    {
+      "id": "doorway",
+      "x": 0.62,
+      "y": 0.38,
+      "title": "The man in the doorway",
+      "story": "At the back, a court official pauses on the stairs in a bright doorway, adding even more depth to this puzzle of looking and being looked at."
+    }
+  ],
+  "Q1133420": [
+    {
+      "id": "key",
+      "x": 0.5,
+      "y": 0.55,
+      "title": "Handing over the key",
+      "story": "The defeated Dutch commander hands the keys of Breda to the Spanish general, who kindly stops him from kneeling. Velázquez turned a surrender into a moment of respect."
+    },
+    {
+      "id": "lances",
+      "x": 0.78,
+      "y": 0.2,
+      "title": "A forest of lances",
+      "story": "The tall, straight lances of the Spanish army give the painting its nickname in Spain, Las Lanzas."
+    }
+  ],
+  "Q275349": [
+    {
+      "id": "mirror",
+      "x": 0.5,
+      "y": 0.35,
+      "title": "A blurry reflection",
+      "story": "Cupid holds a mirror for Venus, but her reflected face is soft and blurred, so we never quite see who she is."
+    },
+    {
+      "id": "slashed",
+      "x": 0.5,
+      "y": 0.65,
+      "title": "Attacked in protest",
+      "story": "In 1914, the campaigner Mary Richardson slashed this painting with a meat cleaver at the National Gallery in London, protesting the arrest of the suffragette leader Emmeline Pankhurst. It was carefully repaired."
+    }
+  ],
+  "Q2727560": [
+    {
+      "id": "signature",
+      "x": 0.45,
+      "y": 0.72,
+      "title": "A signature in red",
+      "story": "This is the only painting Caravaggio ever signed, and he wrote his name in the red blood flowing on the floor."
+    }
+  ],
+  "Q2653851": [
+    {
+      "id": "diagonal",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A struggle on the diagonal",
+      "story": "Straining men heave the cross upward along a sharp diagonal line. Rubens fills the scene with muscle and movement, typical of the energetic Baroque style."
+    }
+  ],
+  "Q1752990": [
+    {
+      "id": "cup",
+      "x": 0.45,
+      "y": 0.5,
+      "title": "Reaching for the poison",
+      "story": "Condemned to death, the philosopher Socrates reaches for the cup of hemlock while still teaching, his other hand raised toward the heavens."
+    },
+    {
+      "id": "plato",
+      "x": 0.1,
+      "y": 0.6,
+      "title": "Plato at the end of the bed",
+      "story": "The old man sitting quietly at the foot of the bed is Plato, Socrates's famous student, shown deep in thought. In reality Plato was young and not present, but David included him anyway."
+    }
+  ],
+  "Q476458": [
+    {
+      "id": "brothers",
+      "x": 0.3,
+      "y": 0.4,
+      "title": "Three brothers swear",
+      "story": "Three brothers stretch out their arms and swear to fight for Rome. Their straight, hard lines express duty and courage."
+    },
+    {
+      "id": "swords",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "The father's swords",
+      "story": "At the centre, their father holds up three swords, the point where all the arms and lines meet."
+    },
+    {
+      "id": "women",
+      "x": 0.8,
+      "y": 0.62,
+      "title": "The grieving women",
+      "story": "On the right, the women of the family collapse in sorrow, knowing that whatever happens, someone they love will die."
+    }
+  ],
+  "Q636537": [
+    {
+      "id": "letter",
+      "x": 0.38,
+      "y": 0.58,
+      "title": "The fatal letter",
+      "story": "Marat, a leader of the French Revolution, still holds a letter from Charlotte Corday, the woman who gained entry by pretending to need his help, then killed him in his bath."
+    },
+    {
+      "id": "crate",
+      "x": 0.55,
+      "y": 0.85,
+      "title": "A painter's tribute",
+      "story": "On the wooden crate, David painted a dedication, 'To Marat, David'. The two were friends, and David turned Marat into a martyr of the Revolution."
+    }
+  ],
+  "Q604761": [
+    {
+      "id": "blue",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A daring blue",
+      "story": "Gainsborough dressed the boy almost entirely in shimmering blue. Many believe he was answering a rival painter who claimed blue should never dominate a picture."
+    },
+    {
+      "id": "travels",
+      "x": 0.5,
+      "y": 0.15,
+      "title": "A famous journey",
+      "story": "When it was sold to an American collector in 1921, crowds came to say goodbye before it left London. In 2022 it returned to London on loan for the first time in about a hundred years."
+    }
+  ],
+  "Q2629559": [
+    {
+      "id": "slipper",
+      "x": 0.45,
+      "y": 0.33,
+      "title": "A flying slipper",
+      "story": "As the young woman swings high, one pink slipper flies off her foot into the air, the most famous detail of this playful painting."
+    },
+    {
+      "id": "admirer",
+      "x": 0.2,
+      "y": 0.75,
+      "title": "The hidden admirer",
+      "story": "Down in the bushes, a young man reaches up, clearly enjoying the view. He is in on the secret, while the older man pushing the swing seems not to notice."
+    },
+    {
+      "id": "cupid",
+      "x": 0.12,
+      "y": 0.3,
+      "title": "Keep it quiet",
+      "story": "A statue of Cupid holds a finger to his lips, as if asking us to keep this flirtation a secret."
+    }
+  ],
+  "Q1167796": [
+    {
+      "id": "bird",
+      "x": 0.5,
+      "y": 0.25,
+      "title": "A bird in a jar",
+      "story": "A travelling scientist pumps the air out of a glass jar holding a cockatoo, showing that living things need air. Will he let the air back in before it's too late?"
+    },
+    {
+      "id": "girls",
+      "x": 0.75,
+      "y": 0.45,
+      "title": "Too scary to watch",
+      "story": "Two young girls are upset; one covers her eyes while her father gently explains. Each person reacts differently to the science."
+    }
+  ],
+  "Q2317837": [
+    {
+      "id": "demon",
+      "x": 0.6,
+      "y": 0.42,
+      "title": "A demon on her chest",
+      "story": "A grinning demon squats on the sleeping woman, a way of picturing the heavy, frightening feeling of a bad dream."
+    },
+    {
+      "id": "horse",
+      "x": 0.35,
+      "y": 0.22,
+      "title": "The nightmare horse",
+      "story": "A ghostly horse with blank eyes pushes through the curtain, a visual play on the word 'nightmare'. The painting caused a sensation in 1782."
+    }
+  ],
+  "Q29530": [
+    {
+      "id": "liberty",
+      "x": 0.5,
+      "y": 0.28,
+      "title": "Liberty herself",
+      "story": "A woman representing Liberty leads the people over the barricade, raising the red, white and blue flag of France. She is often said to have helped inspire the Statue of Liberty."
+    },
+    {
+      "id": "boy",
+      "x": 0.66,
+      "y": 0.55,
+      "title": "The boy with pistols",
+      "story": "A young boy charges forward waving two pistols. He is often linked to Gavroche, the street boy in Victor Hugo's novel Les Misérables, written decades later."
+    },
+    {
+      "id": "tophat",
+      "x": 0.33,
+      "y": 0.45,
+      "title": "The man in the top hat",
+      "story": "The man in the top hat holding a gun has sometimes been seen as a self-portrait of Delacroix, though most experts doubt it."
+    },
+    {
+      "id": "notredame",
+      "x": 0.84,
+      "y": 0.4,
+      "title": "Notre-Dame in the smoke",
+      "story": "Far in the background, the towers of Notre-Dame Cathedral rise through the smoke, telling us this is Paris, during the July Revolution of 1830."
+    }
+  ],
+  "Q212616": [
+    {
+      "id": "ship",
+      "x": 0.88,
+      "y": 0.33,
+      "title": "A tiny ship on the horizon",
+      "story": "Look at the far horizon: a speck of a ship. The survivors wave desperately, hoping to be seen. The real rescue ship did finally save them."
+    },
+    {
+      "id": "waving",
+      "x": 0.75,
+      "y": 0.25,
+      "title": "Waving for rescue",
+      "story": "At the top of the pile of bodies, a man waves a cloth toward the horizon, the moment hope returns."
+    },
+    {
+      "id": "research",
+      "x": 0.3,
+      "y": 0.7,
+      "title": "A real disaster",
+      "story": "In 1816 the French ship Medusa ran aground and about 150 people were left on a raft; only a handful survived. Géricault interviewed survivors and even built a model of the raft."
+    }
+  ],
+  "Q1091086": [
+    {
+      "id": "man",
+      "x": 0.45,
+      "y": 0.45,
+      "title": "Arms raised",
+      "story": "The man in the white shirt throws up his arms like a figure on a cross. Look at his hand and you may see a mark like a wound."
+    },
+    {
+      "id": "soldiers",
+      "x": 0.75,
+      "y": 0.5,
+      "title": "Faceless soldiers",
+      "story": "The firing squad stands with its back to us, faces hidden, like a machine rather than people."
+    },
+    {
+      "id": "lantern",
+      "x": 0.6,
+      "y": 0.6,
+      "title": "The lantern's light",
+      "story": "A big lantern on the ground lights the victims, making them the bright centre of this dark night in 1808, when Napoleon's troops executed Spanish citizens."
+    }
+  ],
+  "Q1150997": [
+    {
+      "id": "walls",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Painted on his own walls",
+      "story": "Goya painted this on a wall of his house, one of his so-called Black Paintings, never meant for the public. It was moved onto canvas after his death."
+    }
+  ],
+  "Q1231009": [
+    {
+      "id": "crown",
+      "x": 0.6,
+      "y": 0.5,
+      "title": "Napoleon crowns Josephine",
+      "story": "David chose not to show Napoleon crowning himself, but the gentler moment when he crowned his wife Josephine."
+    },
+    {
+      "id": "mother",
+      "x": 0.5,
+      "y": 0.25,
+      "title": "A guest who wasn't there",
+      "story": "Napoleon's mother appears in the place of honour in the gallery, yet she did not actually attend. Napoleon asked David to include her anyway."
+    }
+  ],
+  "Q1978815": [
+    {
+      "id": "back",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "An impossibly long back",
+      "story": "Critics joked that this figure had a few extra vertebrae. Ingres stretched her back and arm on purpose, choosing elegance over accurate anatomy."
+    }
+  ],
+  "Q478271": [
+    {
+      "id": "letter",
+      "x": 0.45,
+      "y": 0.62,
+      "title": "Writing a rude letter",
+      "story": "The Cossacks are writing a mocking reply to the Ottoman Sultan, who had demanded their surrender. The scribe writes while everyone else suggests insults."
+    },
+    {
+      "id": "laughter",
+      "x": 0.5,
+      "y": 0.35,
+      "title": "A room full of laughter",
+      "story": "Repin spent years on this painting and gave each Cossack his own kind of laugh, from a quiet smile to a belly laugh."
+    }
+  ],
+  "Q152509": [
+    {
+      "id": "scandal",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A scandal in 1863",
+      "story": "Rejected by the official Salon, this painting was shown at the Salon des Refusés, an exhibition of rejected works, where it shocked crowds. It became a landmark of modern art."
+    },
+    {
+      "id": "bather",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "The giant bather",
+      "story": "The woman in the stream behind seems far too big for her distance, one of the ways Manet broke the old rules of perspective."
+    }
+  ],
+  "Q737062": [
+    {
+      "id": "gaze",
+      "x": 0.35,
+      "y": 0.25,
+      "title": "She stares back",
+      "story": "The woman looks straight at the viewer with calm confidence. Viewers in 1865 found that direct gaze shocking."
+    },
+    {
+      "id": "maid",
+      "x": 0.72,
+      "y": 0.4,
+      "title": "The maid with flowers",
+      "story": "A maid brings a bouquet from an admirer. She was modelled by a woman named Laure, and recent exhibitions have brought renewed attention to her role."
+    }
+  ],
+  "Q674846": [
+    {
+      "id": "colours",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "Clashing colours",
+      "story": "Van Gogh wrote that he wanted to express 'the terrible passions of humanity' through clashing reds and greens in this all-night café."
+    },
+    {
+      "id": "clock",
+      "x": 0.55,
+      "y": 0.12,
+      "title": "Just after midnight",
+      "story": "The clock above the doorway shows a quarter past twelve. The billiard table casts a long shadow, while a few lonely customers sit around the edges."
+    }
   ]
 }
