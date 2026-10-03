@@ -1,0 +1,889 @@
+{
+  "Q128910": [
+    {
+      "id": "vanishing",
+      "x": 0.5,
+      "y": 0.42,
+      "title": "All lines lead to him",
+      "story": "Every line of the ceiling and walls points to Jesus's head, so your eye always returns to him. Restorers found a tiny hole at that exact spot, left by a nail Leonardo used to guide his perspective lines with string."
+    },
+    {
+      "id": "judas",
+      "x": 0.37,
+      "y": 0.5,
+      "title": "Judas in the shadows",
+      "story": "Judas leans back from the table, clutching a small bag, often read as the silver he was paid. He is the only apostle whose face falls into shadow."
+    },
+    {
+      "id": "peter",
+      "x": 0.32,
+      "y": 0.44,
+      "title": "Peter's knife",
+      "story": "Behind Judas, Peter leans forward with a knife in his hand. It hints at what comes later that night, when Peter draws a blade in the garden."
+    },
+    {
+      "id": "window",
+      "x": 0.5,
+      "y": 0.28,
+      "title": "A halo made of daylight",
+      "story": "Leonardo painted no golden halo around Jesus. Instead, the bright window behind him frames his head with light, doing the same job in a more natural way."
+    },
+    {
+      "id": "doorway",
+      "x": 0.5,
+      "y": 0.93,
+      "title": "The missing feet",
+      "story": "In 1652, the monks cut a doorway into the wall below the painting, slicing away Jesus's feet. Leonardo had also experimented with painting on dry plaster, which is why the mural began flaking within his own lifetime."
+    }
+  ],
+  "Q474338": [
+    {
+      "id": "ermine",
+      "x": 0.45,
+      "y": 0.62,
+      "title": "Not quite a pet",
+      "story": "The white animal is an ermine, a symbol of purity. It is also a clever pun: the Greek word for ermine sounds like the sitter's surname, Gallerani, and her powerful patron Ludovico Sforza was nicknamed 'the ermine'."
+    },
+    {
+      "id": "turn",
+      "x": 0.5,
+      "y": 0.24,
+      "title": "Caught mid-turn",
+      "story": "Instead of posing stiffly, Cecilia twists to look at someone outside the picture. Portraits of the time were usually flat profiles, so this sense of a living moment was strikingly new."
+    },
+    {
+      "id": "hand",
+      "x": 0.4,
+      "y": 0.68,
+      "title": "Leonardo's study of hands",
+      "story": "Look at her long, bony fingers resting on the ermine. Leonardo, who dissected bodies to understand anatomy, painted every knuckle and tendon with care."
+    }
+  ],
+  "Q1892745": [
+    {
+      "id": "orb",
+      "x": 0.62,
+      "y": 0.74,
+      "title": "The puzzling orb",
+      "story": "Christ holds a clear crystal orb. Some critics point out that real solid glass would bend and distort what's behind it, yet here it barely does, a puzzle in a painting whose attribution experts still debate."
+    },
+    {
+      "id": "price",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "The most expensive painting ever sold",
+      "story": "In 2017 this painting sold at auction for about 450 million US dollars, the highest price ever paid for a painting. Its whereabouts since then have been the subject of much speculation."
+    }
+  ],
+  "Q1217213": [
+    {
+      "id": "wings",
+      "x": 0.28,
+      "y": 0.45,
+      "title": "Wings that grew",
+      "story": "The angel Gabriel's wings were based on real birds' wings. A later painter lengthened them, and you can still see the extended part painted over the landscape."
+    },
+    {
+      "id": "lectern",
+      "x": 0.66,
+      "y": 0.62,
+      "title": "A borrowed design",
+      "story": "Mary's reading stand is carved like a tomb made by Leonardo's teacher, Verrocchio. This is one of Leonardo's earliest works, painted while he was still training in Verrocchio's workshop."
+    }
+  ],
+  "Q500242": [
+    {
+      "id": "fingers",
+      "x": 0.5,
+      "y": 0.44,
+      "title": "The almost-touch",
+      "story": "The two fingers don't quite meet. That tiny gap is the moment just before life passes from God to Adam, and it has become one of the most copied details in all of art."
+    },
+    {
+      "id": "adam",
+      "x": 0.25,
+      "y": 0.55,
+      "title": "Waiting for life",
+      "story": "Adam lies relaxed, his arm hanging limply, as if he has a body but not yet the spark of life. Compare it with the powerful, rushing figure of God."
+    },
+    {
+      "id": "brain",
+      "x": 0.8,
+      "y": 0.42,
+      "title": "A hidden brain?",
+      "story": "In 1990 a doctor noticed that the red cloak around God and the angels is shaped remarkably like a human brain. Some think Michelangelo, who studied anatomy, did this on purpose; others think it is a coincidence."
+    },
+    {
+      "id": "eve",
+      "x": 0.72,
+      "y": 0.27,
+      "title": "Who is under God's arm?",
+      "story": "A woman peers out from under God's arm. She is often identified as Eve, not yet created, waiting her turn."
+    }
+  ],
+  "Q567861": [
+    {
+      "id": "christ",
+      "x": 0.5,
+      "y": 0.24,
+      "title": "The judge at the centre",
+      "story": "Christ raises his arm at the centre of a huge swirl of more than three hundred figures, deciding who rises to heaven and who falls. Michelangelo painted it on the altar wall of the Sistine Chapel, decades after the ceiling."
+    },
+    {
+      "id": "skin",
+      "x": 0.55,
+      "y": 0.47,
+      "title": "Michelangelo's hidden self-portrait",
+      "story": "Saint Bartholomew holds up a flayed human skin, the way he was martyred. The sagging face on the skin is widely believed to be Michelangelo's own self-portrait."
+    },
+    {
+      "id": "minos",
+      "x": 0.93,
+      "y": 0.9,
+      "title": "Revenge with donkey ears",
+      "story": "In the bottom corner stands Minos, judge of the underworld, with donkey ears and a snake wrapped around him. His face is said to belong to a papal official who complained about all the nudity, Michelangelo's way of getting even."
+    },
+    {
+      "id": "drapery",
+      "x": 0.3,
+      "y": 0.62,
+      "title": "The added clothes",
+      "story": "After Michelangelo died, church authorities ordered many nude figures covered. The painter who added the cloths and loincloths was mockingly nicknamed 'the breeches maker'."
+    }
+  ],
+  "Q1473546": [
+    {
+      "id": "family",
+      "x": 0.45,
+      "y": 0.45,
+      "title": "A rare finished panel",
+      "story": "This round painting of the Holy Family is the only finished panel painting firmly accepted as Michelangelo's. He thought of himself as a sculptor first, and the twisting, muscular figures look almost carved."
+    },
+    {
+      "id": "youths",
+      "x": 0.15,
+      "y": 0.4,
+      "title": "Strangers in the background",
+      "story": "Behind the family lounge several nude young men. Their meaning is still debated; one common idea is that they stand for the ancient world before Christianity."
+    }
+  ],
+  "Q186953": [
+    {
+      "id": "plato",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "Up versus down",
+      "story": "At the centre walk Plato and Aristotle. Plato points upward to the world of ideas, while Aristotle holds his hand flat over the earth, summing up their two philosophies in a single gesture. Plato is traditionally said to have Leonardo da Vinci's face."
+    },
+    {
+      "id": "heraclitus",
+      "x": 0.42,
+      "y": 0.66,
+      "title": "The brooding thinker",
+      "story": "The figure leaning on a block of marble, lost in thought, is usually identified as Heraclitus. He seems to have been added after the rest was painted, and many believe he is a portrait of Michelangelo, who was working on the Sistine ceiling nearby."
+    },
+    {
+      "id": "euclid",
+      "x": 0.73,
+      "y": 0.73,
+      "title": "Geometry lesson",
+      "story": "Bending over a slate with a compass, a mathematician, usually called Euclid or Archimedes, shows students a diagram. He is thought to be modelled on Raphael's friend, the architect Bramante."
+    },
+    {
+      "id": "raphael",
+      "x": 0.88,
+      "y": 0.55,
+      "title": "Raphael looks back at you",
+      "story": "Near the right edge, a young man in a dark cap gazes straight out of the picture. This is Raphael himself, slipping his self-portrait in among the great minds."
+    }
+  ],
+  "Q328079": [
+    {
+      "id": "cherubs",
+      "x": 0.5,
+      "y": 0.9,
+      "title": "The famous little angels",
+      "story": "Two bored-looking cherubs lean on the ledge at the bottom. They have become far more famous than the painting around them, appearing on everything from postcards to umbrellas."
+    },
+    {
+      "id": "sixtus",
+      "x": 0.22,
+      "y": 0.55,
+      "title": "Pointing at you",
+      "story": "Pope Sixtus II points out of the painting toward the viewer, while his papal crown rests on the ledge. It is as if he is presenting Mary and the child to the people in the church."
+    }
+  ],
+  "Q2344505": [
+    {
+      "id": "goldfinch",
+      "x": 0.48,
+      "y": 0.6,
+      "title": "A bird with a message",
+      "story": "The two children play with a goldfinch, the painting's namesake. Goldfinches eat thistle seeds, and thistles recalled Christ's crown of thorns, so the cheerful bird quietly foretells his suffering."
+    },
+    {
+      "id": "repairs",
+      "x": 0.5,
+      "y": 0.25,
+      "title": "Pieced back together",
+      "story": "In 1547 the house where this painting hung collapsed, and the panel broke into many pieces. It was repaired, and a careful modern restoration finished in 2008 revealed its colours again."
+    }
+  ],
+  "Q151047": [
+    {
+      "id": "venus",
+      "x": 0.5,
+      "y": 0.42,
+      "title": "A goddess born from the sea",
+      "story": "Venus arrives on the shore fully grown, standing in a pose borrowed from ancient Roman statues of the modest Venus. Look closely and her neck is unusually long and her shoulder slopes impossibly, yet she still seems perfectly balanced."
+    },
+    {
+      "id": "winds",
+      "x": 0.17,
+      "y": 0.33,
+      "title": "Blown ashore",
+      "story": "On the left, the wind god Zephyr and a companion blow Venus toward land, while roses tumble through the air around them."
+    },
+    {
+      "id": "cloak",
+      "x": 0.82,
+      "y": 0.45,
+      "title": "A cloak of flowers",
+      "story": "On the right, a goddess of the seasons rushes forward with a flowered cloak, ready to cover Venus as she steps onto land."
+    },
+    {
+      "id": "shell",
+      "x": 0.5,
+      "y": 0.86,
+      "title": "The scallop shell",
+      "story": "Venus rides a giant scallop shell across the waves. The painting was made on canvas rather than wood, unusual in Florence at the time for such a large work."
+    }
+  ],
+  "Q549847": [
+    {
+      "id": "cupid",
+      "x": 0.5,
+      "y": 0.12,
+      "title": "Love is blind",
+      "story": "Above Venus hovers a blindfolded Cupid, aiming a flaming arrow at the dancing women below. Love, the painting suggests, strikes without looking."
+    },
+    {
+      "id": "graces",
+      "x": 0.24,
+      "y": 0.5,
+      "title": "The Three Graces",
+      "story": "Three women in transparent gowns dance in a circle, their hands linked. They are the Graces, ancient symbols of beauty, charm and joy."
+    },
+    {
+      "id": "zephyr",
+      "x": 0.86,
+      "y": 0.42,
+      "title": "A chase becomes spring",
+      "story": "On the right, the blue wind Zephyr catches the nymph Chloris. Flowers spill from her mouth as she transforms into Flora, the goddess of spring, who strides beside her in a flowered dress."
+    },
+    {
+      "id": "flowers",
+      "x": 0.5,
+      "y": 0.9,
+      "title": "A garden of real plants",
+      "story": "Botanists have identified around 500 plants in this painting, including about 190 different flowers, many of them blooming around Florence in springtime."
+    }
+  ],
+  "Q2293953": [
+    {
+      "id": "wasps",
+      "x": 0.88,
+      "y": 0.12,
+      "title": "A buzzing pun",
+      "story": "Wasps swarm around a nest near Mars's head. The Italian for wasp is 'vespa', which may be a playful nod to the Vespucci family, who were connected with Botticelli."
+    },
+    {
+      "id": "satyrs",
+      "x": 0.65,
+      "y": 0.3,
+      "title": "Mischief-makers",
+      "story": "While Mars sleeps after love, little satyrs play with his armour and lance, one even blowing a shell into his ear. Love has disarmed war."
+    }
+  ],
+  "Q969377": [
+    {
+      "id": "light",
+      "x": 0.6,
+      "y": 0.18,
+      "title": "A beam of light",
+      "story": "A sharp beam of light cuts across the dark room, following the direction of Christ's pointing hand, as if the call itself were made of light."
+    },
+    {
+      "id": "hand",
+      "x": 0.75,
+      "y": 0.45,
+      "title": "A famous hand",
+      "story": "Christ's outstretched hand closely echoes Adam's hand in Michelangelo's Creation of Adam, a deliberate link to another moment of being called into new life."
+    },
+    {
+      "id": "matthew",
+      "x": 0.3,
+      "y": 0.42,
+      "title": "Which one is Matthew?",
+      "story": "The bearded man seems to point at himself, asking 'Me?' Yet some art historians argue Matthew is actually the young man at the end of the table, still counting his coins. The debate continues."
+    }
+  ],
+  "Q2470123": [
+    {
+      "id": "judith",
+      "x": 0.55,
+      "y": 0.3,
+      "title": "Reluctant courage",
+      "story": "Judith frowns as she does the deed, half determined and half disgusted. Caravaggio was famous for showing violent stories with startling realism."
+    },
+    {
+      "id": "maid",
+      "x": 0.84,
+      "y": 0.33,
+      "title": "The old servant",
+      "story": "Beside her, the wrinkled old maid clutches a bag for the head, her face tense with eager concentration. Her age makes Judith look even younger."
+    }
+  ],
+  "Q2293905": [
+    {
+      "id": "face",
+      "x": 0.5,
+      "y": 0.45,
+      "title": "The painter as monster",
+      "story": "Medusa screams at the moment her head is cut off. Many believe Caravaggio used his own face for her."
+    },
+    {
+      "id": "shield",
+      "x": 0.85,
+      "y": 0.15,
+      "title": "Painted on a shield",
+      "story": "This painting is on a real, curved ceremonial shield, made as a gift for the Grand Duke of Tuscany. The curve makes the snakes seem to writhe outward toward you."
+    }
+  ],
+  "Q318947": [
+    {
+      "id": "basket",
+      "x": 0.3,
+      "y": 0.6,
+      "title": "About to fall",
+      "story": "The fruit basket teeters on the very edge of the table, its shadow falling toward you. It seems ready to tumble out of the painting into your space."
+    },
+    {
+      "id": "christ",
+      "x": 0.5,
+      "y": 0.35,
+      "title": "An unexpected face",
+      "story": "Christ is shown young and beardless, which surprised viewers used to bearded images of him. It fits the story: the disciples did not recognise him at first."
+    }
+  ],
+  "Q219831": [
+    {
+      "id": "captain",
+      "x": 0.46,
+      "y": 0.55,
+      "title": "The captain's command",
+      "story": "Captain Frans Banninck Cocq, in black with a red sash, gives the order to march. His outstretched hand casts a shadow onto his lieutenant's bright yellow coat."
+    },
+    {
+      "id": "girl",
+      "x": 0.35,
+      "y": 0.5,
+      "title": "The mysterious girl in gold",
+      "story": "A glowing girl moves through the crowd with a dead chicken hanging from her belt. Its claws were the symbol of this militia company, so she works like a living mascot."
+    },
+    {
+      "id": "night",
+      "x": 0.75,
+      "y": 0.25,
+      "title": "Not actually night",
+      "story": "This is a daytime scene. Layers of old varnish darkened it so much that it gained the nickname The Night Watch, long after Rembrandt's death."
+    },
+    {
+      "id": "trimmed",
+      "x": 0.04,
+      "y": 0.5,
+      "title": "Cut to fit",
+      "story": "In 1715, the painting was moved to Amsterdam's town hall and trimmed on all sides to fit between two doors. Strips were lost, including two figures on the left."
+    }
+  ],
+  "Q661378": [
+    {
+      "id": "arm",
+      "x": 0.62,
+      "y": 0.6,
+      "title": "Starting with the arm",
+      "story": "Dr Tulp lifts the muscles of the forearm with forceps. Real dissections usually began with the stomach, so beginning with the arm let Rembrandt show the hand, a symbol of human skill."
+    },
+    {
+      "id": "tulp",
+      "x": 0.76,
+      "y": 0.38,
+      "title": "The famous doctor",
+      "story": "Dr Nicolaes Tulp was a leading Amsterdam surgeon. This group portrait, paid for by the surgeons in it, made young Rembrandt's reputation."
+    },
+    {
+      "id": "body",
+      "x": 0.4,
+      "y": 0.66,
+      "title": "The man on the table",
+      "story": "The body belongs to Aris Kindt, a criminal hanged for armed robbery earlier that day. Public dissections were allowed only on executed criminals."
+    }
+  ],
+  "Q2246489": [
+    {
+      "id": "self",
+      "x": 0.55,
+      "y": 0.62,
+      "title": "Rembrandt on board",
+      "story": "Among the terrified disciples, one man clutches his cap and looks straight out at you. He is thought to be Rembrandt himself."
+    },
+    {
+      "id": "stolen",
+      "x": 0.3,
+      "y": 0.25,
+      "title": "A painting still missing",
+      "story": "This is Rembrandt's only known seascape, and nobody has seen it since 1990, when thieves stole it from the Isabella Stewart Gardner Museum in Boston. Its empty frame still hangs there, waiting."
+    }
+  ],
+  "Q167605": [
+    {
+      "id": "milk",
+      "x": 0.47,
+      "y": 0.6,
+      "title": "A thin stream of milk",
+      "story": "The milk pours in a fine, steady stream, a calm, frozen moment of everyday work. The whole painting feels unusually still and quiet."
+    },
+    {
+      "id": "bread",
+      "x": 0.3,
+      "y": 0.62,
+      "title": "Sparkling bread",
+      "story": "The bread and basket are covered in tiny dots of bright paint. Vermeer used these points of light to make crusts and wicker seem to glitter."
+    },
+    {
+      "id": "warmer",
+      "x": 0.88,
+      "y": 0.88,
+      "title": "The foot warmer",
+      "story": "On the floor sits a small foot warmer, a box for hot coals, beside Delft tiles decorated with a little Cupid. Scholars still debate whether Cupid hints at the maid's private thoughts."
+    },
+    {
+      "id": "wall",
+      "x": 0.78,
+      "y": 0.2,
+      "title": "The bare wall",
+      "story": "Look at the white wall: you can spot a nail and the hole where another one used to be. X-rays show Vermeer originally painted something hanging there, then painted over it to keep the wall simple."
+    }
+  ],
+  "Q523974": [
+    {
+      "id": "yellow",
+      "x": 0.66,
+      "y": 0.42,
+      "title": "A little patch of yellow wall",
+      "story": "The French novelist Marcel Proust adored this painting and wrote about a small patch of sunlit yellow wall in it, calling the work one of the most beautiful paintings in the world."
+    },
+    {
+      "id": "church",
+      "x": 0.62,
+      "y": 0.32,
+      "title": "Sun on the New Church",
+      "story": "Clouds shade the foreground, while sunlight falls on the town behind, catching the tower of the New Church. The play of shadow and light makes the city glow."
+    }
+  ],
+  "Q588695": [
+    {
+      "id": "painter",
+      "x": 0.4,
+      "y": 0.55,
+      "title": "The painter's back",
+      "story": "The artist sits with his back to us, so we never see his face. Some believe it is Vermeer himself, but we cannot be sure."
+    },
+    {
+      "id": "clio",
+      "x": 0.66,
+      "y": 0.4,
+      "title": "The muse of history",
+      "story": "The model holds a trumpet and a book and wears a laurel crown, dressed as Clio, the muse of history. The painter is turning an ordinary girl into an idea."
+    },
+    {
+      "id": "map",
+      "x": 0.5,
+      "y": 0.15,
+      "title": "An out-of-date map",
+      "story": "The large wall map shows the Netherlands before it split into a northern and southern part, a world that no longer existed by Vermeer's time. A crease runs down its middle like the divide itself."
+    }
+  ],
+  "Q7487097": [
+    {
+      "id": "thorn",
+      "x": 0.5,
+      "y": 0.82,
+      "title": "A clever excuse",
+      "story": "Shakuntala pretends to pull a thorn from her foot, but she is really looking back at King Dushyanta, with whom she has fallen in love. The scene comes from Kalidasa's famous Sanskrit play."
+    },
+    {
+      "id": "prints",
+      "x": 0.5,
+      "y": 0.3,
+      "title": "Art for every home",
+      "story": "Raja Ravi Varma set up a printing press, and cheap prints of paintings like this spread across India. For many families, these were the first artworks they ever owned."
+    }
+  ],
+  "Q55373382": [
+    {
+      "id": "family",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "A family moment",
+      "story": "The woman and child are believed to be modelled on the painter's own daughter and grandson, eagerly turning as father returns home."
+    }
+  ],
+  "Q55373282": [
+    {
+      "id": "musicians",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Women from across India",
+      "story": "Each musician wears the dress of a different region of India, from Kerala to Kashmir. Ravi Varma brought them together to show the country's variety in a single scene."
+    }
+  ],
+  "Q154469": [
+    {
+      "id": "hands",
+      "x": 0.3,
+      "y": 0.55,
+      "title": "Hands that dug the earth",
+      "story": "Van Gogh wrote that he wanted to show these peasants eating potatoes with the very hands they used to dig the soil. Their rough, bony hands are the heart of the picture."
+    },
+    {
+      "id": "lamp",
+      "x": 0.5,
+      "y": 0.15,
+      "title": "A single lamp",
+      "story": "One small lamp lights the whole room, casting deep shadows. Van Gogh considered this dark early work one of his most important paintings."
+    }
+  ],
+  "Q1025704": [
+    {
+      "id": "sky",
+      "x": 0.62,
+      "y": 0.1,
+      "title": "A night sky without black",
+      "story": "This was the first painting in which Van Gogh used a starry sky. He wrote proudly that he had painted the night without using any black, only deep blues, violets and greens."
+    },
+    {
+      "id": "terrace",
+      "x": 0.35,
+      "y": 0.5,
+      "title": "Painted on the spot",
+      "story": "Van Gogh set up his easel in the street in Arles and painted this café at night, by the light of the gas lamp glowing under the yellow awning."
+    }
+  ],
+  "Q634122": [
+    {
+      "id": "myth",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Not his last painting",
+      "story": "Legend says this was Van Gogh's final painting before his death, but letters and research suggest he made other works after it."
+    },
+    {
+      "id": "paths",
+      "x": 0.5,
+      "y": 0.85,
+      "title": "Roads to nowhere",
+      "story": "Three paths cut through the wheat, but none seems to lead anywhere, while crows scatter across a stormy sky."
+    }
+  ],
+  "Q2282256": [
+    {
+      "id": "asylum",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "Painted in the asylum garden",
+      "story": "Van Gogh painted these irises in the garden of the asylum at Saint-Rémy, in his first week there. In 1987 it sold for a record-breaking price at the time."
+    }
+  ],
+  "Q328523": [
+    {
+      "id": "sun",
+      "x": 0.6,
+      "y": 0.31,
+      "title": "A sun that vanishes",
+      "story": "The orange sun seems to blaze, but it is almost exactly as bright as the grey sky around it. Turn the painting black and white and the sun nearly disappears."
+    },
+    {
+      "id": "name",
+      "x": 0.2,
+      "y": 0.35,
+      "title": "The painting that named a movement",
+      "story": "A critic mocked this painting's title, Impression, calling the whole group of artists 'Impressionists'. The insult stuck, and became the name of one of art's most loved movements."
+    },
+    {
+      "id": "boats",
+      "x": 0.48,
+      "y": 0.74,
+      "title": "Quick strokes",
+      "story": "The little rowing boats are made of just a few dabs of dark paint. Monet painted the port of Le Havre fast, trying to catch a fleeting morning moment."
+    }
+  ],
+  "Q2395218": [
+    {
+      "id": "camille",
+      "x": 0.4,
+      "y": 0.3,
+      "title": "Camille in the wind",
+      "story": "Monet's wife Camille stands on a hill, her veil and dress caught by the breeze. He painted from below, so she seems to stand against the open sky."
+    },
+    {
+      "id": "jean",
+      "x": 0.75,
+      "y": 0.62,
+      "title": "Their son Jean",
+      "story": "Further back stands the couple's young son Jean, half hidden by the grass."
+    }
+  ],
+  "Q1167912": [
+    {
+      "id": "fragment",
+      "x": 0.5,
+      "y": 0.5,
+      "title": "A painting in pieces",
+      "story": "Monet planned a huge picnic scene but couldn't pay his rent, and left the canvas with his landlord. When he got it back, it was damaged by damp, so he cut it up. Only fragments survive."
+    }
+  ],
+  "Q683274": [
+    {
+      "id": "light",
+      "x": 0.4,
+      "y": 0.62,
+      "title": "Dappled sunlight",
+      "story": "Spots of sunlight filter through the trees onto jackets and dresses. Renoir captured how light dances over a crowd on a Sunday afternoon in Montmartre."
+    },
+    {
+      "id": "friends",
+      "x": 0.3,
+      "y": 0.4,
+      "title": "A party of friends",
+      "story": "Many of the dancers and chatting figures were Renoir's own friends, which gives the scene its relaxed, happy feeling."
+    }
+  ],
+  "Q1167907": [
+    {
+      "id": "aline",
+      "x": 0.15,
+      "y": 0.48,
+      "title": "The woman with the dog",
+      "story": "The young woman playing with a little dog is Aline Charigot, a seamstress who later married Renoir."
+    },
+    {
+      "id": "caillebotte",
+      "x": 0.8,
+      "y": 0.65,
+      "title": "The painter on the chair",
+      "story": "The man sitting backwards on his chair is the painter Gustave Caillebotte, a friend of Renoir and an important supporter of the Impressionists."
+    }
+  ],
+  "Q1239950": [
+    {
+      "id": "glass",
+      "x": 0.45,
+      "y": 0.6,
+      "title": "The green drink",
+      "story": "In front of the woman sits a glass of absinthe, a strong green spirit popular in Paris cafés. Critics found the painting shocking."
+    },
+    {
+      "id": "models",
+      "x": 0.4,
+      "y": 0.42,
+      "title": "Not really drinkers",
+      "story": "The two figures were posed by Degas's friends, the actress Ellen Andrée and the painter Marcel Desboutin. Many viewers assumed they were real drunkards, which annoyed them."
+    }
+  ],
+  "Q2734209": [
+    {
+      "id": "tutu",
+      "x": 0.5,
+      "y": 0.6,
+      "title": "A real tutu",
+      "story": "This dancer is a sculpture, and Degas dressed her in a real fabric tutu and a silk ribbon in her hair. When first shown, many found it shockingly lifelike."
+    }
+  ],
+  "Q3821820": [
+    {
+      "id": "master",
+      "x": 0.45,
+      "y": 0.5,
+      "title": "The ballet master",
+      "story": "At the centre, leaning on a stick, stands Jules Perrot, a famous dancer and ballet master, watching his students closely."
+    }
+  ],
+  "Q3956440": [
+    {
+      "id": "table",
+      "x": 0.5,
+      "y": 0.78,
+      "title": "A table that doesn't line up",
+      "story": "The front edge of the table is not straight: the left and right parts sit at different heights. Cézanne bent the rules of perspective to show objects from several viewpoints at once."
+    },
+    {
+      "id": "bottle",
+      "x": 0.36,
+      "y": 0.22,
+      "title": "The tilting bottle",
+      "story": "The bottle leans as if it's about to tip over. This freedom with shape inspired later artists, including Picasso and the Cubists."
+    }
+  ],
+  "Q3210778": [
+    {
+      "id": "mountain",
+      "x": 0.6,
+      "y": 0.35,
+      "title": "His favourite mountain",
+      "story": "Cézanne painted Mont Sainte-Victoire, near his home in Provence, dozens of times. Each version breaks the landscape into patches of colour a little more."
+    }
+  ],
+  "Q698487": [
+    {
+      "id": "gold",
+      "x": 0.5,
+      "y": 0.38,
+      "title": "Real gold leaf",
+      "story": "Klimt used real gold leaf in this painting, inspired by the glittering gold mosaics he admired in churches in Ravenna, Italy."
+    },
+    {
+      "id": "man",
+      "x": 0.4,
+      "y": 0.3,
+      "title": "Squares for him",
+      "story": "The man's robe is covered in black, white and gold rectangles, hard-edged and upright."
+    },
+    {
+      "id": "woman",
+      "x": 0.56,
+      "y": 0.68,
+      "title": "Circles for her",
+      "story": "The woman's dress is filled with circles and flowers. The two patterns melt together as the lovers embrace."
+    },
+    {
+      "id": "edge",
+      "x": 0.62,
+      "y": 0.9,
+      "title": "On the edge",
+      "story": "The couple kneel at the very edge of a flower meadow, and her toes curl over the drop. Their perfect moment seems to hang right above an abyss."
+    }
+  ],
+  "Q354396": [
+    {
+      "id": "adele",
+      "x": 0.47,
+      "y": 0.3,
+      "title": "Adele Bloch-Bauer",
+      "story": "Adele was a Viennese hostess whose husband, a sugar industrialist, commissioned this portrait. Klimt worked on it for about three years."
+    },
+    {
+      "id": "eyes",
+      "x": 0.42,
+      "y": 0.62,
+      "title": "Eyes in the dress",
+      "story": "Look closely at her golden dress: it is scattered with eye-shaped symbols, inspired by ancient Egyptian art."
+    },
+    {
+      "id": "stolen",
+      "x": 0.82,
+      "y": 0.2,
+      "title": "Stolen and returned",
+      "story": "The Nazis seized this painting from Adele's family. Decades later, her niece Maria Altmann won a long legal battle to get it back, a story told in the film Woman in Gold."
+    }
+  ],
+  "Q2324643": [
+    {
+      "id": "head",
+      "x": 0.85,
+      "y": 0.88,
+      "title": "The head at the edge",
+      "story": "At the bottom edge, half cut off, is the head of Holofernes. Klimt pushes it almost out of the painting, so all attention falls on Judith's face."
+    },
+    {
+      "id": "choker",
+      "x": 0.5,
+      "y": 0.22,
+      "title": "The golden choker",
+      "story": "A wide gold choker wraps Judith's neck, seeming to separate her head from her body, an eerie echo of what has just happened to Holofernes."
+    }
+  ],
+  "Q1683743": [
+    {
+      "id": "title",
+      "x": 0.5,
+      "y": 0.4,
+      "title": "Love or vampire?",
+      "story": "Munch first called this painting Love and Pain. A writer friend described it as a vampire biting its victim, and that title stuck, even though it may simply show a tender embrace."
+    }
+  ],
+  "Q18208623": [
+    {
+      "id": "sky",
+      "x": 0.5,
+      "y": 0.15,
+      "title": "The Scream's sky again",
+      "story": "The blood-red sky and the curving fjord also appear in Munch's famous The Scream. Here, a whole crowd of pale, staring faces shares that same anxious mood."
+    }
+  ],
+  "Q252485": [
+    {
+      "id": "fuji",
+      "x": 0.66,
+      "y": 0.68,
+      "title": "Tiny Mount Fuji",
+      "story": "Japan's sacred Mount Fuji, usually towering and grand, looks tiny here, like just another wave. The giant wave seems ready to swallow even the mountain."
+    },
+    {
+      "id": "claws",
+      "x": 0.3,
+      "y": 0.2,
+      "title": "Claws of foam",
+      "story": "The foam at the wave's crest breaks into finger-like claws reaching for the boats. It is one of the most recognisable shapes in all of art."
+    },
+    {
+      "id": "boats",
+      "x": 0.55,
+      "y": 0.55,
+      "title": "Rowers holding on",
+      "story": "Three fishing boats carry rowers who duck their heads as the wave rises over them. These fast boats rushed fresh fish to the markets of Edo, today's Tokyo."
+    },
+    {
+      "id": "blue",
+      "x": 0.15,
+      "y": 0.78,
+      "title": "A new blue",
+      "story": "Hokusai used Prussian blue, a pigment imported from Europe that was new and exciting in Japan. This print is a woodblock print, so thousands of copies were made."
+    }
+  ],
+  "Q3565037": [
+    {
+      "id": "red",
+      "x": 0.5,
+      "y": 0.32,
+      "title": "Red Fuji",
+      "story": "This print is nicknamed Red Fuji. In late summer or early autumn, the morning sun can turn the mountain's slopes red for a few moments."
+    },
+    {
+      "id": "clouds",
+      "x": 0.3,
+      "y": 0.15,
+      "title": "Rows of clouds",
+      "story": "Small white clouds line up in the blue sky like fish scales, adding a gentle rhythm above the mountain."
+    }
+  ],
+  "Q18173384": [
+    {
+      "id": "lightning",
+      "x": 0.2,
+      "y": 0.78,
+      "title": "Storm below, calm above",
+      "story": "Lightning flashes across the dark lower slopes, while the summit stands above the storm in clear sky."
+    }
+  ]
+}

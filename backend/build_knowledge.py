@@ -8,6 +8,7 @@ import httpx
 ROOT = Path(__file__).resolve().parent.parent
 PAINTINGS = ROOT / "src" / "data" / "paintings.json"
 HOTSPOTS = ROOT / "src" / "data" / "hotspots.json"
+CURATED = ROOT / "src" / "data" / "curated-hotspots.json"
 OUTPUT = Path(__file__).resolve().parent / "data" / "knowledge.json"
 
 API = "https://en.wikipedia.org/w/api.php"
@@ -73,7 +74,9 @@ def chunk_article(text):
 
 def main():
     paintings = json.loads(PAINTINGS.read_text(encoding="utf-8"))["paintings"]
-    hotspots = json.loads(HOTSPOTS.read_text(encoding="utf-8")) if HOTSPOTS.exists() else {}
+    curated = json.loads(CURATED.read_text(encoding="utf-8")) if CURATED.exists() else {}
+    yours = json.loads(HOTSPOTS.read_text(encoding="utf-8")) if HOTSPOTS.exists() else {}
+    hotspots = {**curated, **yours}
     knowledge = {}
     failures = {}
 

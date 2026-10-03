@@ -1,10 +1,11 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import Frame from '../components/Frame.jsx'
 import EmptyCollection from '../components/EmptyCollection.jsx'
 import NotFound from './NotFound.jsx'
 import { ENTRANCE, findRoom, roomKey } from '../data/museum.js'
 import { getRoomPaintings, hasCollection } from '../api/collection.js'
+import { hotspotCount } from '../api/hotspots.js'
 import { useWall } from '../hooks/useWall.js'
 import { useMediaQuery } from '../hooks/useMediaQuery.js'
 
@@ -22,13 +23,16 @@ export default function Room() {
   useWall(wing?.wall ?? ENTRANCE.wall, wing?.text ?? ENTRANCE.text)
   const isSmall = useMediaQuery('(max-width: 767px)')
   const wallRef = useRef(null)
+  const [onlyDetails, setOnlyDetails] = useState(false)
 
   if (!room) return <NotFound />
 
   const previous = wing.rooms[index - 1]
   const next = wing.rooms[index + 1]
   const frameHeight = isSmall ? 230 : 340
-  const paintings = getRoomPaintings(roomKey(wing.id, room.id))
+  const allPaintings = getRoomPaintings(roomKey(wing.id, room.id))
+  const withDetails = allPaintings.filter((p) => hotspotCount(p.id) > 0).length
+  const paintings = onlyDetails ? allPaintings.filter((p) => hotspotCount(p.id) > 0) : allPaintings
 
   function walk(direction) {
     const el = wallRef.current
@@ -51,10 +55,28 @@ export default function Room() {
         </nav>
         <h1 className="mt-6 font-display text-4xl md:text-6xl">{room.name}</h1>
         <p className="mt-3 text-lg opacity-90">{room.subtitle}</p>
+        {withDetails > 0 && (
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
+            <span className="inline-flex items-center gap-2">
+              <span className="grid h-6 w-6 place-items-center rounded-full border-2 border-ivory bg-gilt text-xs font-semibold text-ink">
+                {withDetails}
+              </span>
+              {withDetails === 1 ? 'painting here has' : 'paintings here have'} hidden details to explore
+            </span>
+            <button
+              type="button"
+              onClick={() => setOnlyDetails((v) => !v)}
+              aria-pressed={onlyDetails}
+              className="border border-current px-3 py-1.5 transition-colors hover:bg-white/10 aria-pressed:bg-ivory aria-pressed:text-ink"
+            >
+              {onlyDetails ? 'Show all paintings' : 'Only show those'}
+            </button>
+          </div>
+        )}
       </div>
 
       {!hasCollection() && <EmptyCollection />}
-      {hasCollection() && paintings.length === 0 && (
+      {hasCollection() && allPaintings.length === 0 && (
         <p className="mx-auto max-w-md py-24 text-center">This room is empty for now. Try the next room along the corridor.</p>
       )}
       {paintings.length > 0 && (

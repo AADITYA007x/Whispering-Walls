@@ -36,6 +36,7 @@ async function request(url, options = {}, tries = 4) {
 function buildQuery(f) {
   const parts = []
   if (f.painting) parts.push(`?item wdt:P31 ${PAINTING} .`)
+  if (f.types) parts.push(`VALUES ?typeName { ${literals(f.types)} } ?type rdfs:label ?typeName . ?item wdt:P31 ?type .`)
 
   const groups = []
   if (f.artists) groups.push(`VALUES ?artistName { ${literals(f.artists)} } ?artist rdfs:label ?artistName . ?item wdt:P170 ?artist .`)

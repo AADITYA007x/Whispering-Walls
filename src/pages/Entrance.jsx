@@ -2,6 +2,8 @@ import { Link, useNavigate } from 'react-router'
 import Doorway from '../components/Doorway.jsx'
 import ArtImage from '../components/ArtImage.jsx'
 import EmptyCollection from '../components/EmptyCollection.jsx'
+import DetailsBadge from '../components/DetailsBadge.jsx'
+import { hotspotCount } from '../api/hotspots.js'
 import { ENTRANCE, SURPRISE, WINGS } from '../data/museum.js'
 import { byline, getPaintingOfTheDay, getRandomPainting, hasCollection } from '../api/collection.js'
 import { useWall } from '../hooks/useWall.js'
@@ -57,6 +59,7 @@ export default function Entrance() {
             <div>
               <p className="font-display text-3xl font-medium leading-tight md:text-4xl">{featured.title}</p>
               <p className="mt-3 opacity-80">{byline(featured)}</p>
+              <DetailsBadge count={hotspotCount(featured.id)} className="mt-2" />
               {featured.story && <p className="mt-4 line-clamp-3 max-w-[60ch] opacity-80">{featured.story}</p>}
               <Link
                 to={`/painting/${featured.id}`}
