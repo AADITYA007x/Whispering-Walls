@@ -29,10 +29,10 @@ export default function Entrance() {
   const whispering = mostFamous((p) => hotspotCount(p.id) > 0, 14)
   const total = totalPaintings()
   const withDetails = mostFamous((p) => hotspotCount(p.id) > 0, 10000).length
-  const [mysteryPainting] = useState(() => getRandomPainting())
+  const [mysteryPainting] = useState(() => getRandomPainting(featured?.id))
 
   function surprise() {
-    const painting = getRandomPainting()
+    const painting = getRandomPainting(featured?.id)
     if (painting) navigate(`/painting/${painting.id}`)
   }
 

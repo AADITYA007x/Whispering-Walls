@@ -1,4 +1,5 @@
 import data from '../data/paintings.json'
+import { hotspotCount } from './hotspots.js'
 
 const all = Object.values(data.paintings)
 
@@ -14,16 +15,23 @@ export function getPainting(id) {
   return data.paintings[id] || null
 }
 
-export function getPaintingOfTheDay() {
-  if (!all.length) return null
-  const famous = [...all].sort((a, b) => b.fame - a.fame).slice(0, 60)
-  const day = Math.floor(Date.now() / 86400000)
-  return famous[day % famous.length]
+function showcase() {
+  const best = all.filter((p) => p.story && hotspotCount(p.id) > 0).sort((a, b) => b.fame - a.fame)
+  if (best.length) return best
+  return [...all].sort((a, b) => b.fame - a.fame).slice(0, 60)
 }
 
-export function getRandomPainting() {
-  if (!all.length) return null
-  return all[Math.floor(Math.random() * all.length)]
+export function getPaintingOfTheDay() {
+  const pool = showcase()
+  if (!pool.length) return null
+  const day = Math.floor(Date.now() / 86400000)
+  return pool[day % pool.length]
+}
+
+export function getRandomPainting(exceptId) {
+  const pool = showcase().filter((p) => p.id !== exceptId)
+  if (!pool.length) return null
+  return pool[Math.floor(Math.random() * pool.length)]
 }
 
 export function imageSources(painting, large = false) {
